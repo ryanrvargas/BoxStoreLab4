@@ -30,4 +30,4 @@ Allow the user to add multiple items to the order until prompted to check out.
 Displays an order summary (group item types together in output) and asks the user to confirm checkout.
 Calculates the total, including tax (note: tax should be different for food items vs non-food items).
 Displays the updated inventory for the item(s) sold.
-Displays return policy for item categories sold.    
+Displays return policy for item categories sold.
