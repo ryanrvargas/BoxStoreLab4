@@ -1,3 +1,14 @@
+/**
+ * Jovani Rivera-Hernandez
+ * Date: March 12, 2025
+ * Section: 331 002
+ *
+ * The Outerware class represents outerwear products available in a store.
+ * It extends the Store class and includes attributes specific to outerwear,
+ * such as material, size, season, top or bottom.
+ */
+
+
 public class Outerwear extends Store{
     /**
      * Private attributes representing outerwear details
