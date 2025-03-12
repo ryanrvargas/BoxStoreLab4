@@ -33,6 +33,10 @@ public class Store {
      * Initializes an object without setting any attributes.
      */
     public Store() {
+        this.name = "Unknown";
+        this.price = 0;
+        this.quantity = 0;
+        this.brand = "Generic";
     }
 
     /**
