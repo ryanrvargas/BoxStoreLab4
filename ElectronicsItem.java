@@ -9,6 +9,9 @@ public class ElectronicsItem extends Store {
         this.screenType = screenType;
         this.bluetooth = bluetooth;
     }
+    public ElectronicsItem(){
+        
+    }
 
     public void setTouchScreen(Boolean touchScreen) {
         this.touchScreen = touchScreen;
