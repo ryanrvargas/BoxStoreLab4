@@ -1,8 +1,8 @@
-Ryan: Clases - Vegetable, ElectronicsItem, CleaningSupply, ClothingItem, Phone, Furniture
+Ryan: Clases - Laptop, ElectronicsItem, CleaningSupply, ClothingItem, Phone, Furniture
 
 Jovani:Classes - Outerwear, Shoe, Shirt, HouseholdItem, TV
 
-Harrison:Classes - FoodItem, StoreItem, ShelfStable, Fruit, Laptop
+Harrison:Classes - FoodItem, StoreItem, ShelfStable, Fruit, Vegetable
 
 Lab Instructions:
 Box Store Group Lab
