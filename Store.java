@@ -12,6 +12,10 @@ public class Store {
         this.brand = (brand != null) ? brand : "Generic";
     }
 
+    public Store(){
+
+    }
+
     // Get product information
     public String getInfo() {
         return name + " by " + brand + " - $" + String.format("%.2f", price) + " (Stock: " + quantity + ")";
