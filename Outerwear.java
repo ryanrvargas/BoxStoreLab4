@@ -19,7 +19,7 @@ public class Outerwear extends Store{
     private String TopOrBottom;
 
     /**
-     * constructor to initialize outerwear with given parameter
+     * constructor to initialize outerwear with given parameters
      * @param material
      * @param size
      * @param season
@@ -34,7 +34,7 @@ public class Outerwear extends Store{
     }
 
     /**
-     * Retrives the material of the outerwear
+     * Retrives the material, size, season, top or bottom of the outerwear
      * @return material
      * @return size
      * @return season
