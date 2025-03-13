@@ -8,5 +8,12 @@
  */
 
 
-public class ShelfStable {
+public class ShelfStable extends FoodItem {
+
+    // Attributes
+    private String type;
+    private String manufacturedDate;
+    private String allergyInfo;
+    private String packageType;
+
 }

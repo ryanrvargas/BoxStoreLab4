@@ -9,7 +9,12 @@
 
 
 
-public class Fruit {
+public class Fruit extends FoodItem {
+
+    // Attributes
+    private String color;
+    private Boolean ripe;
+    private String harvestDate;
 
 
 }
