@@ -1,12 +1,14 @@
+!Extend all class from StoreItem class!
+
 Ryan: Clases - Laptop(Done), ElectronicsItem(Done), CleaningSupply, 
 ClothingItem(Done), Phone(Done), Furniture
 
-Jovani:Classes - Outerwear(Done), Shoe, Shirt, HouseholdItem, TV
+Jovani:Classes - Outerwear(Done), Shoe, Shirt, HouseholdItem(WORKING, TV
 
-Harrison:Classes - FoodItem, StoreItem, ShelfStable, Fruit, Vegetable
+Harrison:Classes - FoodItem, StoreItem(Done), ShelfStable, Fruit, Vegetable
 
 Lab Instructions:
-Box StoreItem Group Lab
+Box Store Group Lab
 
 Form Teams of 3 for this Assignment. Work together to complete the following tasks as a team.
 Given the following classes, create an inheritance hierarchy chart showing their relationships.
