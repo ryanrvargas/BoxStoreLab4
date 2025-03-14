@@ -23,7 +23,8 @@ public class ElectronicsItem extends Store {
      * @param touchScreen Indicates if the item has a touchscreen.
      * @param bluetooth  Indicates if the item supports Bluetooth.
      */
-    public ElectronicsItem(String name, double price, int quantity, String brand, String screenType, Boolean touchScreen, Boolean bluetooth) {
+    public ElectronicsItem(String name, double price, int quantity, String brand,
+                           String screenType, Boolean touchScreen, Boolean bluetooth) {
         super(name, price, quantity, brand);
         this.touchScreen = touchScreen;
         this.screenType = screenType;
@@ -35,6 +36,10 @@ public class ElectronicsItem extends Store {
      * Initializes an object without setting any attributes.
      */
     public ElectronicsItem() {
+        super();
+        this.touchScreen = false;
+        this.screenType = "";
+        this.bluetooth = false;
     }
 
     /**
