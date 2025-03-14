@@ -2,7 +2,6 @@
  * Ryan Vargas
  * Date: March 14, 2025
  * Section: 331 002
- *
  * The Furniture class represents furniture items available in the store.
  * It extends HouseholdItem and includes attributes specific to furniture,
  * such as furniture type, style, color, and whether the item is pre-assembled.
