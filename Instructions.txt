@@ -1,6 +1,7 @@
-Ryan: Clases - Laptop, ElectronicsItem, CleaningSupply, ClothingItem, Phone, Furniture
+Ryan: Clases - Laptop(Done), ElectronicsItem(Done), CleaningSupply, 
+ClothingItem(Done), Phone(Done), Furniture
 
-Jovani:Classes - Outerwear, Shoe, Shirt, HouseholdItem, TV
+Jovani:Classes - Outerwear(Done), Shoe, Shirt, HouseholdItem, TV
 
 Harrison:Classes - FoodItem, StoreItem, ShelfStable, Fruit, Vegetable
 
