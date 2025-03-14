@@ -93,7 +93,7 @@ public class Shoe extends StoreItem {
      */
     @Override
     public String toString() {
-        return super.getInfo() + ".\nShoe size is: " + getSize() +
+        return super.toString() + ".\nShoe size is: " + getSize() +
                 " | Occasion is: " + getOccasion() +
                 " | Male or Female shoe: " + getMaleOrFemale() + " | Has laces: " + isLaces() + " | Is shoe a hightop or lowtop: " + getHightopOrLowtop() ;
     }

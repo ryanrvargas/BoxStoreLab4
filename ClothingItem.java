@@ -129,7 +129,7 @@ public class ClothingItem extends StoreItem {
      */
     @Override
     public String toString() {
-        return super.getInfo() +
+        return super.toString() +
                 ".\nMaterial: " + getMaterial() +
                 " | Size: " + getSize() +
                 " | Season: " + getSeason() +

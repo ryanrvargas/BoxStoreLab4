@@ -104,7 +104,7 @@ public class ElectronicsItem extends StoreItem {
      */
     @Override
     public String toString() {
-        return super.getInfo() + ".\nIs Touch Screen: " + getTouchScreen() +
+        return super.toString() + ".\nIs Touch Screen: " + getTouchScreen() +
                 " | Screen Type: " + getScreenType() +
                 " | Is Bluetooth: " + getBluetooth();
     }

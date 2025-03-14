@@ -83,6 +83,6 @@ public class FoodItem extends StoreItem {
     }
     @Override
     public String toString(){
-        return super.getInfo() + ".\nWeight: " + getWeight() + "Is Organic: " + getOrganic() + "Origin: " + getOrigin() + "Calorie Amount: " + getCalories() + "Expiration Date: " + getExpirationDate();
+        return super.toString() + ".\nWeight: " + getWeight() + "Is Organic: " + getOrganic() + "Origin: " + getOrigin() + "Calorie Amount: " + getCalories() + "Expiration Date: " + getExpirationDate();
     }
 }

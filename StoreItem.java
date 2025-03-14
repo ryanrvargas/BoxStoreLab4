@@ -44,7 +44,7 @@ public class StoreItem {
      *
      * @return A string representation of the product, including name, brand, price, and stock quantity.
      */
-    public String getInfo() {
+    public String toString() {
         return name + " by " + brand + " - $" + String.format("%.2f", price) + " (Stock: " + quantity + ")";
     }
 
