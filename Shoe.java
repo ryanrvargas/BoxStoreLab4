@@ -9,7 +9,7 @@
  */
 
 
-public class Shoe extends Store{
+public class Shoe extends StoreItem {
     /**
      * private attributes representing shoe details
      */

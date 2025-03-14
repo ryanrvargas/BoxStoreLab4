@@ -7,7 +7,7 @@
  * It extends Store and includes additional attributes such as material, size,
  * season, and whether the item is a top or bottom.
  */
-public class ClothingItem extends Store {
+public class ClothingItem extends StoreItem {
     private String material;
     private String size;
     private String season;

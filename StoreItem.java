@@ -7,7 +7,7 @@
  * It contains attributes such as name, price, quantity, and brand.
  * This class serves as a parent class for more specific product types.
  */
-public class Store {
+public class StoreItem {
     private String name;
     private double price;
     private int quantity;
@@ -21,7 +21,7 @@ public class Store {
      * @param quantity The available stock quantity.
      * @param brand    The brand of the product. Defaults to "Generic" if null.
      */
-    public Store(String name, double price, int quantity, String brand) {
+    public StoreItem(String name, double price, int quantity, String brand) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -32,7 +32,7 @@ public class Store {
      * Default constructor for Store.
      * Initializes an object without setting any attributes.
      */
-    public Store() {
+    public StoreItem() {
         this.name = "Unknown";
         this.price = 0;
         this.quantity = 0;

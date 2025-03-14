@@ -6,7 +6,7 @@ Jovani:Classes - Outerwear(Done), Shoe, Shirt, HouseholdItem, TV
 Harrison:Classes - FoodItem, StoreItem, ShelfStable, Fruit, Vegetable
 
 Lab Instructions:
-Box Store Group Lab
+Box StoreItem Group Lab
 
 Form Teams of 3 for this Assignment. Work together to complete the following tasks as a team.
 Given the following classes, create an inheritance hierarchy chart showing their relationships.

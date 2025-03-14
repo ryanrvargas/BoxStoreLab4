@@ -8,7 +8,7 @@
  */
 
 
-public class FoodItem extends Store {
+public class FoodItem extends StoreItem {
 
     // Attributes
     private double weight;

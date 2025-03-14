@@ -7,7 +7,7 @@
  * It extends the Store class and includes attributes specific to electronics,
  * such as touchscreen capability, screen type, and Bluetooth functionality.
  */
-public class ElectronicsItem extends Store {
+public class ElectronicsItem extends StoreItem {
     private Boolean touchScreen;
     private String screenType;
     private Boolean bluetooth;
