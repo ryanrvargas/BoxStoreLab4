@@ -1,9 +1,10 @@
-!Extend all class from StoreItem class!
+!Extend these classes from StoreItem -> FoodItem, ElectronicsItem, ClothingItem, HouseHold
+Extend all others subclasses to there respective parent class
 
 Ryan: Clases - Laptop(Done), ElectronicsItem(Done), CleaningSupply, 
 ClothingItem(Done), Phone(Done), Furniture
 
-Jovani:Classes - Outerwear(Done), Shoe, Shirt, HouseholdItem(WORKING, TV
+Jovani:Classes - Outerwear(Done), Shoe, Shirt, HouseholdItem(WORKING), TV
 
 Harrison:Classes - FoodItem, StoreItem(Done), ShelfStable, Fruit, Vegetable
 
