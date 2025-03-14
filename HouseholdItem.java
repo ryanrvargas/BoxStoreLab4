@@ -9,7 +9,7 @@
  */
 public class HouseholdItem extends StoreItem {
     private String roomType;
-    private String dimensions; // Fixed spelling
+    private String dimensions;
     private String material;
     private int weight;
     private boolean fragile;
