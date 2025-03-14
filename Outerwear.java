@@ -3,79 +3,98 @@
  * Date: March 12, 2025
  * Section: 331 002
  *
- * The Outerware class represents outerwear products available in a store.
- * It extends the Store class and includes attributes specific to outerwear,
- * such as material, size, season, top or bottom.
+ * The Outerwear class represents outerwear products available in a store.
+ * It extends the ClothingItem class and includes attributes specific to outerwear,
+ * such as material, size, season, top or bottom, waterproof capability, and whether it has a hood.
+ *
+ * From Ryan: I made some adjustments since this class is an extension of ClothingItems.
  */
 
-
-public class Outerwear extends Store{
-    /**
-     * Private attributes representing outerwear details
-     */
-    private String material;
-    private String size;
-    private String season;
-    private String TopOrBottom;
+public class Outerwear extends ClothingItem {
+    private boolean isWaterProof;
+    private boolean hooded;
 
     /**
-     * constructor to initialize outerwear with given parameter
-     * @param material
-     * @param size
-     * @param season
-     * @param TopOrBottom
+     * Constructs an Outerwear object with specified attributes.
+     *
+     * @param name        The name of the outerwear item.
+     * @param price       The price of the outerwear item.
+     * @param quantity    The available stock quantity.
+     * @param brand       The brand of the outerwear item.
+     * @param material    The material type (e.g., wool, leather, synthetic).
+     * @param size        The size of the outerwear item (e.g., S, M, L, XL).
+     * @param season      The season for which the outerwear is designed (e.g., winter, fall).
+     * @param topOrBottom Specifies whether the outerwear is a "Top" or "Bottom".
+     * @param isWaterProof Indicates if the outerwear is waterproof.
+     * @param hooded      Indicates if the outerwear has a hood.
      */
-    public Outerwear (String name, double price, int quantity, String brand, String material, String size, String season, String TopOrBottom){
-        super(name, price, quantity, brand);
-        this.material = material;
-        this.size = size;
-        this.season = season;
-        this.TopOrBottom = TopOrBottom;
+    public Outerwear(String name, double price, int quantity, String brand, String material, String size, String season, String topOrBottom,
+                     boolean isWaterProof, boolean hooded) {
+        super(name, price, quantity, brand, material, size, season, topOrBottom);
+        this.isWaterProof = isWaterProof;
+        this.hooded = hooded;
     }
 
     /**
-     * Retrives the material of the outerwear
-     * @return material
-     * @return size
-     * @return season
-     * @return TopOrBottom
+     * Default constructor for Outerwear.
+     * Initializes an object with default values.
      */
-    public String getMaterial() {return material;}
-    public String getSize() {return size;}
-    public String getSeason() {return season;}
-    public String getTopOrBottom() {return TopOrBottom;}
+    public Outerwear() {
+        super();
+        this.isWaterProof = false;
+        this.hooded = false;
+    }
+
+    // =================== Getters ===================
 
     /**
-     * Updates the material of outerwear
-     * @param material
-     */
-    public void setMaterial(String material) {this.material = material;}
-    /**
-     * Updates the material of outerwear
-     * @param size
-     */
-    public void setSize(String size) {this.size = size;}
-    /**
-     * Updates the material of outerwear
-     * @param season
-     */
-    public void setSeason(String season) {this.season = season;}
-    /**
-     * Updates the material of outerwear
-     * @param topOrBottom
-     */
-    public void setTopOrBottom(String topOrBottom) {TopOrBottom = topOrBottom;}
-
-    /**
-     * Returns a string representation of the ElectronicsItem object, including
-     * product details from the parent class and additional electronic-specific attributes.
+     * Retrieves whether the outerwear is waterproof.
      *
-     * @return A formatted string containing product details.
+     * @return true if the outerwear is waterproof, false otherwise.
+     */
+    public boolean isWaterProof() {
+        return isWaterProof;
+    }
+
+    /**
+     * Retrieves whether the outerwear has a hood.
+     *
+     * @return true if the outerwear has a hood, false otherwise.
+     */
+    public boolean isHooded() {
+        return hooded;
+    }
+
+    // =================== Setters ===================
+
+    /**
+     * Sets whether the outerwear is waterproof.
+     *
+     * @param isWaterProof true if the outerwear is waterproof, false otherwise.
+     */
+    public void setWaterProof(boolean isWaterProof) {
+        this.isWaterProof = isWaterProof;
+    }
+
+    /**
+     * Sets whether the outerwear has a hood.
+     *
+     * @param hooded true if the outerwear has a hood, false otherwise.
+     */
+    public void setHooded(boolean hooded) {
+        this.hooded = hooded;
+    }
+
+    /**
+     * Returns a string representation of the Outerwear object, including
+     * product details from ClothingItem and additional outerwear-specific attributes.
+     *
+     * @return A formatted string containing outerwear details.
      */
     @Override
     public String toString() {
-        return super.getInfo() + ".\nMaterial is: " + getMaterial() +
-                " | Size is: " + getSize() +
-                " | Season is: " + getSeason() + " | Top or bottom: " + getTopOrBottom() ;
+        return super.toString() +
+                "\nIs waterproof: " + isWaterProof +
+                " | Hooded: " + hooded;
     }
 }

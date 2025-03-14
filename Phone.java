@@ -133,7 +133,7 @@ public class Phone extends ElectronicsItem {
      */
     @Override
     public String toString() {
-        return super.getInfo() +
+        return super.toString() +
                 "\nColor: " + color +
                 " | Carrier: " + carrier +
                 " | Model: " + model +
