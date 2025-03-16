@@ -5,7 +5,7 @@ To print info use super.toString() instead of getInfo()
 Ryan: Clases - Laptop(Done), ElectronicsItem(Done), CleaningSupply(Done), 
 ClothingItem(Done), Phone(Done), Furniture(Done)
 
-Jovani:Classes - Outerwear(Done), Shoe(Done), Shirt, HouseholdItem(Done), TV
+Jovani:Classes - Outerwear(Done), Shoe(Done), Shirt(done), HouseholdItem(Done), TV
 
 Harrison:Classes - FoodItem, StoreItem(Done), ShelfStable, Fruit, Vegetable
 
