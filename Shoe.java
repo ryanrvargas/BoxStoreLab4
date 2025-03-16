@@ -3,9 +3,9 @@
  * Date: March 12, 2025
  * Section: 331 002
  *
- * The Outerware class represents outerwear products available in a store.
- * It extends the Store class and includes attributes specific to outerwear,
- * such as material, size, season, top or bottom.
+ * The shoe class represents shoe products available in a store.
+ * It extends the Store class and includes attributes specific to shoes,
+ * such as size, occasion, male or female, laces, hightop or lowtop.
  */
 
 
@@ -86,8 +86,8 @@ public class Shoe extends StoreItem {
 
 
     /**
-     * Returns a string representation of the ElectronicsItem object, including
-     * product details from the parent class and additional electronic-specific attributes.
+     * Returns a string representation of the ClothingItem object, including
+     * product details from the parent class and additional shoe-specific attributes.
      *
      * @return A formatted string containing product details.
      */
