@@ -17,7 +17,23 @@ public class Vegetable extends FoodItem{
     private String storageRequirements;
     private String freshness;
 
-
+    /**
+     * Constructs a vegetable object with specified attributes
+     *
+     * @param name                  The name of the vegetable
+     * @param price                 The price of the vegetable
+     * @param quantity              The number of vegetables
+     * @param brand                 The brand of vegetable
+     * @param weight                The weight of the vegetable
+     * @param organic               If the vegetable is organic or not
+     * @param origin                The origin of the vegetable
+     * @param calories              The calories in the vegetable
+     * @param expirationDate        The expiration date of the vegetable
+     * @param color                 The color of the vegetable
+     * @param harvestDate           The harvest date of the vegetable
+     * @param storageRequirements   The storage requirements of the vegetable
+     * @param freshness             The freshness of the vegetable
+     */
     public Vegetable(String name, double price, int quantity, String brand,
                      double weight, Boolean organic, String origin,
                      int calories, String expirationDate, String color,
