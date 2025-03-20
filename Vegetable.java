@@ -6,7 +6,7 @@
  *
  * Purpose: Implementing the Vegetable class
  */
-
+import java.util.*;
 
 
 public class Vegetable extends FoodItem{

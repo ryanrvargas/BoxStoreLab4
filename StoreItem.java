@@ -7,6 +7,8 @@
  * It contains attributes such as name, price, quantity, and brand.
  * This class serves as a parent class for more specific product types.
  */
+import java.util.*;
+
 public class StoreItem {
     private String name;
     private double price;
