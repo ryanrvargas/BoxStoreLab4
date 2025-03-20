@@ -35,6 +35,14 @@ public class StoreItem {
         this.returnPolicy =  (returnPolicy != null) ? returnPolicy : "None" ;
     }
 
+    public StoreItem(String name, double price, int quantity, String brand) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.brand = (brand != null) ? brand : "Generic";
+
+    }
+
     /**
      * Default constructor for Store.
      * Initializes an object without setting any attributes.
