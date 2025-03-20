@@ -26,6 +26,22 @@ public class WQSVargas1Rivera2Hubbard3 {
     }
 
     public static void sellingItem() {
+        System.out.println("What Category would you like to shop for?");
+        System.out.println("1. Food Item");
+        System.out.println("2. Electronic Item");
+        System.out.println("3. Clothing Item");
+        System.out.println("4. Household Item");
+        System.out.println("Enter your selection");
+        int selection = scanner.nextInt();
+
+        System.out.printf("%-20s %-10s %-10s %-6s",
+                "Category", "Name", "Quantity", "Brand");
+        System.out.println("---------------------------------------------------------------------------------------------");
+        for (StoreItem v : storeitem) {
+            System.out.printf("%-20s %-10d %-10d %-6s",
+                    v.getName(), v.getPrice(), v.getQuantity(), v.getBrand());
+        }
+
 
     }
 
