@@ -14,6 +14,9 @@ public class StoreItem {
     private double price;
     private int quantity;
     private String brand;
+    private String category;
+    private String returnPolicy;
+
 
     /**
      * Constructs a Store object with specified attributes.
@@ -23,11 +26,13 @@ public class StoreItem {
      * @param quantity The available stock quantity.
      * @param brand    The brand of the product. Defaults to "Generic" if null.
      */
-    public StoreItem(String name, double price, int quantity, String brand) {
+    public StoreItem(String name, double price, int quantity, String brand, String category, String returnPolicy) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.brand = (brand != null) ? brand : "Generic";
+        this.category = category;
+        this.returnPolicy =  (returnPolicy != null) ? returnPolicy : "None" ;
     }
 
     /**
@@ -39,6 +44,8 @@ public class StoreItem {
         this.price = 0;
         this.quantity = 0;
         this.brand = "Generic";
+        this.category = "Unknown";
+        this.returnPolicy = "None";
     }
 
     /**
@@ -47,7 +54,7 @@ public class StoreItem {
      * @return A string representation of the product, including name, brand, price, and stock quantity.
      */
     public String toString() {
-        return name + " by " + brand + " - $" + String.format("%.2f", price) + " (Stock: " + quantity + ")";
+        return name + " by " + brand + " - $" + String.format("%.2f", price) + " (Stock: " + quantity + ")"  + "(Category: " + category + ")" + "(Return Policy: " + returnPolicy +")";
     }
 
     // =================== Getters ===================
@@ -88,6 +95,18 @@ public class StoreItem {
         return brand;
     }
 
+    /**
+     * Retrieves the category of the product.
+     * @return the category of item
+     */
+    public String getCategory() {return category;}
+
+    /**
+     * Retrieves return policy of the item
+     * @return the return policy of the item
+     */
+    public String getReturnPolicy(){return returnPolicy;}
+
     // =================== Setters ===================
 
     /**
@@ -125,4 +144,19 @@ public class StoreItem {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
+    /**
+     * Set's the category of the item
+     *
+     * @param category the category of the item
+     */
+    public void setCategory(String category){this.category = category;}
+
+    /**
+     * Set's the return policy of the item
+     *
+     * @param returnPolicy the return policy of the item
+     */
+    public void setReturnPolicy(String returnPolicy){this.returnPolicy = returnPolicy;}
+
 }
