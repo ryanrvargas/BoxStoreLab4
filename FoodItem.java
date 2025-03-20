@@ -33,6 +33,11 @@ public class FoodItem extends StoreItem {
      */
     public FoodItem (String name, double price, int quantity, String brand, double weight,Boolean organic, String origin, int calories, String expirationDate){
         super(name,price,quantity,brand);
+        this.weight = weight;
+        this.organic = organic;
+        this.origin = origin;
+        this.calories = calories;
+        this.expirationDate = expirationDate;
     }
 
     /**
@@ -40,7 +45,12 @@ public class FoodItem extends StoreItem {
      * This is equivalent to a default constructor
      */
     public FoodItem(){
-
+        super();
+        this.weight = 0;
+        this.organic = null;
+        this.origin = null;
+        this.calories = 0;
+        this.expirationDate = null;
     }
 
     // Gettors
