@@ -48,10 +48,13 @@ public class WQSVargas1Rivera2Hubbard3 {
 
         String category = "";
         switch (selection) {
-            case 1: category = "Food"; break;
-            case 2: category = "Electronics"; break;
-            case 3: category = "Clothing"; break;
-            case 4: category = "Household"; break;
+            case 1: category = "FoodItem";
+
+
+            break;
+            case 2: category = "ElectronicsItem"; break;
+            case 3: category = "ClothingItem"; break;
+            case 4: category = "HouseholdItem"; break;
             default:
                 System.out.println("Invalid selection. Please enter a number between 1 and 4.");
                 return;
