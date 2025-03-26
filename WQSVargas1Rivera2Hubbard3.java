@@ -14,7 +14,9 @@ public class WQSVargas1Rivera2Hubbard3 {
         inventory.add(new StoreItem("Apple",2.50,1,"HoneyCrisps","FoodItem","None"));
         inventory.add(new StoreItem("Broccoli", 3.50, 1, "Smiths", "FoodItem", "None"));
         inventory.add(new StoreItem("Shirt",15.00,1,"GoodFellas", "ClothingItem", "None"));
-        inventory.add(new StoreItem("Phone",500.00,1,"Apple","ElectronicItem","30 days"));
+        inventory.add(new StoreItem("Phone",500.00,1,"Apple","ElectronicsItem","30 days"));
+        inventory.add(new StoreItem("Windex",12.50,1,"SC Johnson","HouseholdItem","30 days"));
+        inventory.add(new StoreItem("Macbook",850.99,1,"Apple","ElectronicsItem","6 months"));
 
     }
 
@@ -49,13 +51,13 @@ public class WQSVargas1Rivera2Hubbard3 {
         String category = "";
         switch (selection) {
             case 1: category = "FoodItem";
-            
-
-
             break;
-            case 2: category = "ElectronicsItem"; break;
-            case 3: category = "ClothingItem"; break;
-            case 4: category = "HouseholdItem"; break;
+            case 2: category = "ElectronicsItem";
+            break;
+            case 3: category = "ClothingItem";
+            break;
+            case 4: category = "HouseholdItem";
+            break;
             default:
                 System.out.println("Invalid selection. Please enter a number between 1 and 4.");
                 return;

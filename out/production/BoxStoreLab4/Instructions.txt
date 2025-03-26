@@ -2,7 +2,7 @@
 Extend all others subclasses to there respective parent class
 To print info use super.toString() instead of getInfo()
 
-Ryan: Clases - Laptop(Done), ElectronicsItem(Done), CleaningSupply(Done), 
+Ryan: Classes - Laptop(Done), ElectronicsItem(Done), CleaningSupply(Done),
 ClothingItem(Done), Phone(Done), Furniture(Done)
 
 Jovani:Classes - Outerwear(Done), Shoe(Done), Shirt(done), HouseholdItem(Done), TV(done)
