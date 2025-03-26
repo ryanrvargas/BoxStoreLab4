@@ -15,17 +15,20 @@ public class ElectronicsItem extends StoreItem {
     /**
      * Constructs an ElectronicsItem object with specified attributes.
      *
-     * @param name       The name of the electronic item.
-     * @param price      The price of the electronic item.
-     * @param quantity   The available stock quantity.
-     * @param brand      The brand of the electronic item.
-     * @param screenType The type of screen (e.g., LED, OLED, LCD).
-     * @param touchScreen Indicates if the item has a touchscreen.
-     * @param bluetooth  Indicates if the item supports Bluetooth.
+     * @param name          The name of the electronic item.
+     * @param price         The price of the electronic item.
+     * @param quantity      The available stock quantity.
+     * @param brand         The brand of the electronic item.
+     * @param category      The category of the item (Food,Electronic,Household)
+     * @param returnPolicy  The return policy of the item (None by default)
+     * @param screenType    The type of screen (e.g., LED, OLED, LCD).
+     * @param touchScreen   Indicates if the item has a touchscreen.
+     * @param bluetooth     Indicates if the item supports Bluetooth.
      */
     public ElectronicsItem(String name, double price, int quantity, String brand,
+                           String category, String returnPolicy,
                            String screenType, Boolean touchScreen, Boolean bluetooth) {
-        super(name, price, quantity, brand);
+        super(name, price, quantity, brand,category,returnPolicy);
         this.touchScreen = touchScreen;
         this.screenType = screenType;
         this.bluetooth = bluetooth;

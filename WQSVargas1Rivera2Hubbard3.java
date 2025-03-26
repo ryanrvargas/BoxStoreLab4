@@ -11,8 +11,11 @@ public class WQSVargas1Rivera2Hubbard3 {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void populateInventory() {
-        inventory.add(new StoreItem("Apple",2.50,1,"HoneyCrisps" ));
-        inventory.add(new StoreItem("Broccoli", 3.50, 1, "Smiths"));
+        inventory.add(new StoreItem("Apple",2.50,1,"HoneyCrisps","FoodItem","None"));
+        inventory.add(new StoreItem("Broccoli", 3.50, 1, "Smiths", "FoodItem", "None"));
+        inventory.add(new StoreItem("Shirt",15.00,1,"GoodFellas", "ClothingItem", "None"));
+        inventory.add(new StoreItem("Phone",500.00,1,"Apple","ElectronicItem","30 days"));
+
     }
 
 

@@ -24,6 +24,8 @@ public class ShelfStable extends FoodItem {
      * @param price                 The price of the ShelfStable item
      * @param quantity              The quantity of the ShelfStable item
      * @param brand                 The brand of the ShelfStable item
+     * @param category              The category of the item
+     * @param returnPolicy          The return policy of the item
      * @param weight                The weight of the ShelfStable item
      * @param organic               If the ShelfStable item  is Organic or not
      * @param origin                The origin of the ShelfStable item
@@ -35,10 +37,11 @@ public class ShelfStable extends FoodItem {
      * @param packageType           The packaging of the ShelfStable item
      */
     public ShelfStable (String name, double price, int quantity, String brand,
+             String category, String returnPolicy,
              double weight, Boolean organic, String origin, int calories, String expirationDate,
              String type, String manufacturedDate, String allergyInfo, String packageType)
     {
-        super(name, price, quantity, brand, weight, organic, origin, calories, expirationDate);
+        super(name, price, quantity, brand, category,returnPolicy, weight, organic, origin, calories, expirationDate);
         this.type = type;
         this.manufacturedDate = manufacturedDate;
         this.allergyInfo = allergyInfo;

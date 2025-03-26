@@ -21,18 +21,20 @@ public class FoodItem extends StoreItem {
 
     /**
      * Constructor with all 6 attributes as parameters
-     * @param name
-     * @param price
-     * @param quantity
-     * @param brand
-     * @param weight
-     * @param organic
-     * @param origin
-     * @param calories
-     * @param expirationDate
+     * @param name              The name of the food item
+     * @param price             The price of the food item
+     * @param quantity          The quantity of the food item
+     * @param brand             The brand of the food item
+     * @param category          The category of item (Food)
+     * @param returnPolicy      The return policy of the item (Default = None)
+     * @param weight            The weight of the item
+     * @param organic           If the food item is organic or not
+     * @param origin            The origin of the food item
+     * @param calories          The calories of the food item
+     * @param expirationDate    The expiration date of the food item
      */
-    public FoodItem (String name, double price, int quantity, String brand, double weight,Boolean organic, String origin, int calories, String expirationDate){
-        super(name,price,quantity,brand);
+    public FoodItem (String name, double price, int quantity, String brand,String category, String returnPolicy, double weight,Boolean organic, String origin, int calories, String expirationDate){
+        super(name,price,quantity,brand,category,returnPolicy);
     }
 
     /**

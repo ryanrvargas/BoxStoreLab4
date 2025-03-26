@@ -24,6 +24,8 @@ public class Vegetable extends FoodItem{
      * @param price                 The price of the vegetable
      * @param quantity              The number of vegetables
      * @param brand                 The brand of vegetable
+     * @param category              The category of item
+     * @param returnPolicy          The return policy of the item
      * @param weight                The weight of the vegetable
      * @param organic               If the vegetable is organic or not
      * @param origin                The origin of the vegetable
@@ -35,10 +37,11 @@ public class Vegetable extends FoodItem{
      * @param freshness             The freshness of the vegetable
      */
     public Vegetable(String name, double price, int quantity, String brand,
+                     String category, String returnPolicy,
                      double weight, Boolean organic, String origin,
                      int calories, String expirationDate, String color,
                      String harvestDate, String storageRequirements, String freshness) {
-        super(name, price, quantity, brand, weight, organic, origin, calories,expirationDate);
+        super(name, price, quantity, brand, category, returnPolicy, weight, organic, origin, calories,expirationDate);
         this.color = color;
         this.harvestDate = harvestDate;
         this.storageRequirements = storageRequirements;

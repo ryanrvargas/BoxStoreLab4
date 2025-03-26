@@ -24,6 +24,8 @@ public class Fruit extends FoodItem {
      * @param price             The price of the fruit
      * @param quantity          The amount of fruit
      * @param brand             The brand of fruit
+     * @param category          The category of item
+     * @param returnPolicy      The return policy of the item
      * @param weight            The weight of fruit
      * @param organic           If the fruit is organic or not
      * @param origin            The country of origin of the fruit
@@ -34,9 +36,10 @@ public class Fruit extends FoodItem {
      * @param harvestDate       The harvest Date of the fruit
      */
     public Fruit (String name, double price, int quantity, String brand,
+                        String category, String returnPolicy,
                         double weight, Boolean organic, String origin, int calories, String expirationDate,
                          String color, Boolean ripe, String harvestDate) {
-        super(name, price, quantity, brand, weight, organic, origin, calories, expirationDate);
+        super(name, price, quantity, brand, category,returnPolicy, weight, organic, origin, calories, expirationDate);
         this.color = color;
         this.ripe = ripe;
         this.harvestDate = harvestDate;

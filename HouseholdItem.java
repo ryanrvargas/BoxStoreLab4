@@ -17,19 +17,21 @@ public class HouseholdItem extends StoreItem {
     /**
      * Constructs a HouseholdItem object with specified attributes.
      *
-     * @param name       The name of the household item.
-     * @param price      The price of the item.
-     * @param quantity   The available stock quantity.
-     * @param brand      The brand of the item.
-     * @param roomType   The room where the item is typically used (e.g., Kitchen, Living Room).
-     * @param dimensions The dimensions of the item (e.g., "12x24x8 inches").
-     * @param material   The material of the item (e.g., Wood, Plastic, Metal).
-     * @param weight     The weight of the item in pounds or kilograms.
-     * @param fragile    Indicates if the item is fragile (true if fragile, false otherwise).
+     * @param name          The name of the household item.
+     * @param price         The price of the item.
+     * @param quantity      The available stock quantity.
+     * @param brand         The brand of the item.
+     * @param category      The category of the item ( Food,Electronics,Clothing,HouseHold)
+     * @param returnPolicy  The returnPolicy of the item (None of none)
+     * @param roomType      The room where the item is typically used (e.g., Kitchen, Living Room).
+     * @param dimensions    The dimensions of the item (e.g., "12x24x8 inches").
+     * @param material      The material of the item (e.g., Wood, Plastic, Metal).
+     * @param weight        The weight of the item in pounds or kilograms.
+     * @param fragile       Indicates if the item is fragile (true if fragile, false otherwise).
      */
-    public HouseholdItem(String name, double price, int quantity, String brand,
+    public HouseholdItem(String name, double price, int quantity, String brand, String category, String returnPolicy,
                          String roomType, String dimensions, String material, int weight, boolean fragile) {
-        super(name, price, quantity, brand);
+        super(name, price, quantity, brand,category,returnPolicy);
         this.roomType = roomType;
         this.dimensions = dimensions;
         this.material = material;
