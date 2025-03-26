@@ -20,6 +20,8 @@ public class Laptop extends ElectronicsItem {
      * @param price           The price of the laptop.
      * @param quantity        The available stock quantity.
      * @param brand           The brand of the laptop.
+     * @param category        The category of the item
+     * @param returnPolicy    The return policy of the item
      * @param screenType      The type of screen (e.g., LED, OLED, LCD).
      * @param touchScreen     Indicates if the laptop has a touchscreen.
      * @param bluetooth       Indicates if the laptop has Bluetooth.
@@ -29,9 +31,10 @@ public class Laptop extends ElectronicsItem {
      * @param operatingSystem The operating system of the laptop (e.g., Windows, macOS, Linux).
      */
     public Laptop(String name, double price, int quantity, String brand,
+                  String category, String returnPolicy,
                   String screenType, Boolean touchScreen, Boolean bluetooth,
                   String processor, int ramSize, int batteryCapacity, String operatingSystem) {
-        super(name, price, quantity, brand, screenType, touchScreen, bluetooth);
+        super(name, price, quantity, brand, category, returnPolicy, screenType, touchScreen, bluetooth);
         this.ramSize = ramSize;
         this.batteryCapacity = batteryCapacity;
         this.operatingSystem = operatingSystem;

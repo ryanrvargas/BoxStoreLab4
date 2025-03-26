@@ -21,6 +21,8 @@ public class CleaningSupply extends HouseholdItem {
      * @param price         The price of the product.
      * @param quantity      The available stock quantity.
      * @param brand         The brand of the product.
+     * @param category      The category of the product.
+     * @param returnPolicy  The return policy of the product.
      * @param roomType      The room where the product is typically used.
      * @param dimensions    The dimensions of the product packaging.
      * @param material      The packaging material (e.g., "Plastic Bottle").
@@ -32,11 +34,11 @@ public class CleaningSupply extends HouseholdItem {
      * @param volume        The volume of the product in ounces or liters.
      * @param flammable     Indicates if the product is flammable.
      */
-    public CleaningSupply(String name, double price, int quantity, String brand,
+    public CleaningSupply(String name, double price, int quantity, String brand, String category, String returnPolicy,
                           String roomType, String dimensions, String material, int weight,
                           boolean fragile, boolean spray, String cleaningType, String scent,
                           double volume, boolean flammable) {
-        super(name, price, quantity, brand, roomType, dimensions, material, weight, fragile);
+        super(name, price, quantity, brand, category,returnPolicy, roomType, dimensions, material, weight, fragile);
         this.spray = spray;
         this.cleaningType = cleaningType;
         this.scent = scent;

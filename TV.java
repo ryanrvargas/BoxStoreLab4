@@ -20,17 +20,19 @@ public class TV extends StoreItem{
 
     /**
      * constructor to initialize tv with given parameters
-     * @param name
-     * @param price
-     * @param quantity
-     * @param brand
-     * @param model
-     * @param resolution
-     * @param size
-     * @param smartTV
+     * @param name          The name of the TV
+     * @param price         The price of the TV
+     * @param quantity      The quantity of the TV's
+     * @param brand         The brand of TV
+     * @param category      The category of item
+     * @param returnPolicy  The return policy of the item
+     * @param model         The model of the TV
+     * @param resolution    The resolution of the TV
+     * @param size          The size of the TV
+     * @param smartTV       If the TV is a smart TV or ot
      */
-    public TV (String name, double price, int quantity, String brand,  String model, String resolution, int size, boolean smartTV){
-        super(name, price, quantity, brand);
+    public TV (String name, double price, int quantity, String brand, String category, String returnPolicy, String model, String resolution, int size, boolean smartTV){
+        super(name, price, quantity, brand,category,returnPolicy);
         this.model = model;
         this.resolution = resolution;
         this.size = size;

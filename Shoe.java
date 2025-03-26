@@ -21,18 +21,20 @@ public class Shoe extends StoreItem {
 
     /**
      * constructor to initialize shoe with given parameters
-     * @param name
-     * @param price
-     * @param quantity
-     * @param brand
-     * @param size
-     * @param occasion
-     * @param maleOrFemale
-     * @param laces
-     * @param hightopOrLowtop
+     * @param name              The name of the shoe
+     * @param price             The price of the shoe
+     * @param quantity          The quantity of shoe
+     * @param brand             The brand of shoe
+     * @param category          The category of item
+     * @param returnPolicy      The return policy of the item
+     * @param size              The size of the shoe
+     * @param occasion          The occasion you wear the shoe
+     * @param maleOrFemale      The gender the shoe is intended for
+     * @param laces             If the shoe has laces (True or False)
+     * @param hightopOrLowtop   If the shoe is high or low top (True or False)
      */
-    public Shoe (String name, double price, int quantity, String brand, String size, String occasion, String maleOrFemale, boolean laces, String hightopOrLowtop){
-        super(name, price, quantity, brand);
+    public Shoe (String name, double price, int quantity, String brand, String category, String returnPolicy, String size, String occasion, String maleOrFemale, boolean laces, String hightopOrLowtop){
+        super(name, price, quantity, brand, category, returnPolicy);
         this.size = size;
         this.occasion = occasion;
         this.maleOrFemale = maleOrFemale;

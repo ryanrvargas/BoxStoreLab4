@@ -20,18 +20,20 @@ public class Shirt extends StoreItem {
 
     /**
      * constructor to initialize shirt with given parameters
-     * @param name
-     * @param price
-     * @param quantity
-     * @param brand
-     * @param size
-     * @param color
-     * @param occasion
-     * @param material
-     * @param design
+     * @param name              The name of the shirt
+     * @param price             The price of the shirt
+     * @param quantity          The quantity of the shirt
+     * @param brand             The brand of the shirt
+     * @param category          The category of the item
+     * @param returnPolicy      The return policy of the item
+     * @param size              The size of the shirt
+     * @param color             The color of the shirt
+     * @param occasion          The occasion of the shirt
+     * @param material          The material of the shirt
+     * @param design            The design of the shirt
      */
-    public Shirt (String name, double price, int quantity, String brand, String size, String color, String occasion, String material, boolean design){
-        super(name, price, quantity, brand);
+    public Shirt (String name, double price, int quantity,String category, String returnPolicy, String brand, String size, String color, String occasion, String material, boolean design){
+        super(name, price, quantity, brand,category,returnPolicy);
         this.size = size;
         this.color = color;
         this.occasion = occasion;
@@ -40,12 +42,12 @@ public class Shirt extends StoreItem {
     }
 
     /**
-     * retrives size, color, occasion, material, design of a shirt
-     * @return size
-     * @return color
-     * @return occasion
-     * @return material
-     * @return design
+     * Retrieves size, color, occasion, material, design of a shirt
+     * @return size             The size of the shirt
+     * @return color            The color of the shirt
+     * @return occasion         The occasion you wear the shirt
+     * @return material         The material of the shirt
+     * @return design           The design of the shirt
      */
     public String getSize() {return size;}
     public String getColor() {return color;}

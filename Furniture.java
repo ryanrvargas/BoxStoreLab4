@@ -19,6 +19,8 @@ public class Furniture extends HouseholdItem {
      * @param price         The price of the furniture item.
      * @param quantity      The available stock quantity.
      * @param brand         The brand of the furniture item.
+     * @param category      The category of the item
+     * @param returnPolicy  The return policy of the item
      * @param roomType      The room where the furniture is typically used.
      * @param dimensions    The dimensions of the furniture (e.g., "80x40x30 inches").
      * @param material      The material of the furniture (e.g., "Wood", "Metal").
@@ -30,9 +32,9 @@ public class Furniture extends HouseholdItem {
      * @param assembled     Indicates if the furniture is pre-assembled.
      */
     public Furniture(String name, double price, int quantity, String brand,
-                     String roomType, String dimensions, String material, int weight, boolean fragile,
+                     String category, String returnPolicy, String roomType, String dimensions, String material, int weight, boolean fragile,
                      String furnitureType, String style, String color, boolean assembled) {
-        super(name, price, quantity, brand, roomType, dimensions, material, weight, fragile);
+        super(name, price, quantity, brand, category, returnPolicy, roomType, dimensions, material, weight, fragile);
         this.furnitureType = furnitureType;
         this.style = style;
         this.color = color;
