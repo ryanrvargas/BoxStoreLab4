@@ -13,11 +13,12 @@ public class WQSVargas1Rivera2Hubbard3 {
     public static void populateInventory() {
         inventory.add(new StoreItem("Apple",2.50,1,"HoneyCrisps","FoodItem","None"));
         inventory.add(new StoreItem("Broccoli", 3.50, 1, "Smiths", "FoodItem", "None"));
-        inventory.add(new StoreItem("Shirt",15.00,1,"GoodFellas", "ClothingItem", "None"));
+        inventory.add(new StoreItem("T-Shirt",15.00,1,"GoodFellas", "ClothingItem", "None"));
         inventory.add(new StoreItem("Phone",500.00,1,"Apple","ElectronicsItem","30 days"));
         inventory.add(new StoreItem("Windex",12.50,1,"SC Johnson","HouseholdItem","30 days"));
         inventory.add(new StoreItem("Macbook",850.99,1,"Apple","ElectronicsItem","6 months"));
-
+        inventory.add(new StoreItem("AirForce Ones",60.00,1,"Nike","ClothingItem","30 days"));
+        inventory.add(new StoreItem("Couch",1899.99,1,"La-Z-Boy","HouseholdItem","6 months"));
     }
 
 
