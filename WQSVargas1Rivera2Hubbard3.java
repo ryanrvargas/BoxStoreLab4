@@ -2,27 +2,23 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class WQSVargas1Rivera2Hubbard3 {
-    static ArrayList<FoodItem> foodItems = new ArrayList<>();
+
     static ArrayList<Fruit> fruits = new ArrayList<>();
     static ArrayList<Vegetable> vegetables = new ArrayList<>();
     static ArrayList<ShelfStable> shelfStables = new ArrayList<>();
-    static ArrayList<HouseholdItem> householdItems = new ArrayList<>();
     static ArrayList<Furniture> furnitureItems = new ArrayList<>();
     static ArrayList<CleaningSupply> cleaningSupplies = new ArrayList<>();
-    static ArrayList<ClothingItem> clothingItems = new ArrayList<>();
     static ArrayList<Shirt> shirts = new ArrayList<>();
     static ArrayList<Shoe> shoes = new ArrayList<>();
     static ArrayList<Outerwear> outerwears = new ArrayList<>();
-    static ArrayList<ElectronicsItem> electronicsItems = new ArrayList<>();
     static ArrayList<Laptop> laptops = new ArrayList<>();
     static ArrayList<Phone> phones = new ArrayList<>();
     static ArrayList<TV> tvs = new ArrayList<>();
-    static ArrayList<StoreItem> storeItems = new ArrayList<>();
+
 
 
     public void addItem() {
         Scanner scanner = new Scanner(System.in);
-
         while (true) {
             System.out.println("\nChoose a category to add an item:");
             System.out.println("0. Exit");
@@ -46,10 +42,10 @@ public class WQSVargas1Rivera2Hubbard3 {
                     System.out.println("3. Shelf-Stable");
                     System.out.print("Enter your choice: ");
                     int foodChoice = scanner.nextInt();
-                    scanner.nextLine();
 
                     switch (foodChoice) {
                         case 1:
+                            printCategory(fruits, "Fruits");
                             scanner.nextLine();
                             System.out.print("Enter Fruit name: ");
                             String fruitName = scanner.nextLine();
@@ -87,6 +83,7 @@ public class WQSVargas1Rivera2Hubbard3 {
 
                             break;
                         case 2:
+                            printCategory(vegetables, "Vegetables");
                             scanner.nextLine();
                             System.out.print("Enter Vegetable name: ");
                             String vegetableName = scanner.nextLine();
@@ -124,6 +121,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             System.out.println("Vegetable added.");
                             break;
                         case 3:
+                            printCategory(shelfStables, "Shelf-Stable Items");
                             scanner.nextLine();
                             System.out.print("Enter ShelfStable name: ");
                             String shelfStableName = scanner.nextLine();
@@ -173,10 +171,11 @@ public class WQSVargas1Rivera2Hubbard3 {
                     System.out.println("3. TV");
                     System.out.print("Enter your choice: ");
                     int electronicsChoice = scanner.nextInt();
-                    scanner.nextLine();
+
 
                     switch (electronicsChoice) {
                         case 1:
+                            printCategory(laptops, "Laptops");
                             scanner.nextLine();
                             System.out.print("Enter Laptop name: ");
                             String laptopName = scanner.nextLine();
@@ -211,6 +210,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             System.out.println("Laptop added.");
                             break;
                         case 2:
+                            printCategory(phones, "Phones");
                             scanner.nextLine();
                             System.out.print("Enter Phone name: ");
                             String phoneName = scanner.nextLine();
@@ -244,6 +244,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             System.out.println("Phone added.");
                             break;
                         case 3:
+                            printCategory(tvs, "TVs");
                             scanner.nextLine();
                             System.out.print("Enter TV name: ");
                             String tvName = scanner.nextLine();
@@ -282,10 +283,11 @@ public class WQSVargas1Rivera2Hubbard3 {
                     System.out.println("3. Outerwear");
                     System.out.print("Enter your choice: ");
                     int clothingChoice = scanner.nextInt();
-                    scanner.nextLine();
+
 
                     switch (clothingChoice) {
                         case 1:
+                            printCategory(shirts, "Shirts");
                             scanner.nextLine();
                             System.out.print("Enter Shirt name: ");
                             String shirtName = scanner.nextLine();
@@ -313,6 +315,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             System.out.println("Shirt added.");
                             break;
                         case 2:
+                            printCategory(shoes, "Shoes");
                             scanner.nextLine();
                             System.out.print("Enter Shoe name: ");
                             String shoeName = scanner.nextLine();
@@ -340,6 +343,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             System.out.println("Shoe added.");
                             break;
                         case 3:
+                            printCategory(outerwears, "Outerwear");
                             scanner.nextLine();
                             System.out.print("Enter Outerwear name: ");
                             String outerwearName = scanner.nextLine();
@@ -381,10 +385,11 @@ public class WQSVargas1Rivera2Hubbard3 {
                     System.out.println("2. Cleaning Supply");
                     System.out.print("Enter your choice: ");
                     int householdChoice = scanner.nextInt();
-                    scanner.nextLine();
+
 
                     switch (householdChoice) {
                         case 1:
+                            printCategory(furnitureItems, "Furniture");
                             scanner.nextLine();
                             System.out.print("Enter Furniture name: ");
                             String name = scanner.nextLine();
@@ -435,6 +440,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             System.out.println("Furniture item added.");
                             break;
                         case 2:
+                            printCategory(cleaningSupplies, "Cleaning Supplies");
                             scanner.nextLine();
                             System.out.print("Enter CleaningSupply name: ");
                             name = scanner.nextLine();
@@ -502,7 +508,6 @@ public class WQSVargas1Rivera2Hubbard3 {
             }
         }
 
-        scanner.close();
     }
 
     public static void displayMenu() {
@@ -516,22 +521,19 @@ public class WQSVargas1Rivera2Hubbard3 {
     public void printInventory() {
         System.out.println("\n========= STORE INVENTORY =========");
 
-        printCategory(foodItems, "Food Items");
+
         printCategory(fruits, "Fruits");
         printCategory(vegetables, "Vegetables");
         printCategory(shelfStables, "Shelf-Stable Items");
-        printCategory(householdItems, "Household Items");
         printCategory(furnitureItems, "Furniture");
         printCategory(cleaningSupplies, "Cleaning Supplies");
-        printCategory(clothingItems, "Clothing Items");
         printCategory(shirts, "Shirts");
         printCategory(shoes, "Shoes");
         printCategory(outerwears, "Outerwear");
-        printCategory(electronicsItems, "Electronics");
         printCategory(laptops, "Laptops");
         printCategory(phones, "Phones");
         printCategory(tvs, "TVs");
-        printCategory(storeItems, "Store Items");
+
 
         System.out.println("\n========= END OF INVENTORY =========\n");
     }
@@ -551,8 +553,23 @@ public class WQSVargas1Rivera2Hubbard3 {
 
     public static void main(String[] args) {
         WQSVargas1Rivera2Hubbard3 manager = new WQSVargas1Rivera2Hubbard3();
-        manager.addItem();
-        manager.printInventory();
+        Scanner scanner = new Scanner(System.in);
+        while (true){
+            displayMenu();
+            int user = scanner.nextInt();
+            switch (user) {
+                case 1://Add
+                    manager.addItem();
+                    manager.printInventory();
+                    break;
+                case 2://Sell
+                    break;
+                case 3://Exit
+                    break;
+            }
+        }
+
+
     }
 
 }
