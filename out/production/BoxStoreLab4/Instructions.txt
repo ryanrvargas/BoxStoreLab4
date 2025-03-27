@@ -4,12 +4,15 @@ To print info use super.toString() instead of getInfo()
 
 Ryan: Clases - Laptop(Done), ElectronicsItem(Done), CleaningSupply(Done), 
 ClothingItem(Done), Phone(Done), Furniture(Done)
+        Create Add Item function
 
 Jovani:Classes - Outerwear(Done), Shoe(Done), Shirt(done), HouseholdItem(Done), TV(done)
+        Create inventory
 
 Harrison:Classes - FoodItem, StoreItem(Done), ShelfStable, Fruit, Vegetable
+        Create Sell Item function
 
-10/16 Complete Classes
+16/16 Complete Classes
 
 Lab Instructions:
 Box Store Group Lab
