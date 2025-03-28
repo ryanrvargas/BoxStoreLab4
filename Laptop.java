@@ -20,6 +20,7 @@ public class Laptop extends ElectronicsItem {
      * @param price           The price of the laptop.
      * @param quantity        The available stock quantity.
      * @param brand           The brand of the laptop.
+     * @param description     The description of the laptop
      * @param screenType      The type of screen (e.g., LED, OLED, LCD).
      * @param touchScreen     Indicates if the laptop has a touchscreen.
      * @param bluetooth       Indicates if the laptop has Bluetooth.
@@ -28,10 +29,10 @@ public class Laptop extends ElectronicsItem {
      * @param batteryCapacity The battery capacity in watt-hours (Wh).
      * @param operatingSystem The operating system of the laptop (e.g., Windows, macOS, Linux).
      */
-    public Laptop(String name, double price, int quantity, String brand,
+    public Laptop(String name, double price, int quantity, String brand, String description,
                   String screenType, Boolean touchScreen, Boolean bluetooth,
                   String processor, int ramSize, int batteryCapacity, String operatingSystem) {
-        super(name, price, quantity, brand, screenType, touchScreen, bluetooth);
+        super(name, price, quantity, brand,description, screenType, touchScreen, bluetooth);
         this.ramSize = ramSize;
         this.batteryCapacity = batteryCapacity;
         this.operatingSystem = operatingSystem;
@@ -149,7 +150,7 @@ public class Laptop extends ElectronicsItem {
      */
     @Override
     public StoreItem cloneWithQuantity(int quantity) {
-        return new Laptop(getName(), getPrice(), quantity, getBrand(),
+        return new Laptop(getName(), getPrice(), quantity, getBrand(), getDescription(),
                 getScreenType(), getTouchScreen(), getBluetooth(),
                 getProcessor(), getRamSize(), getBatteryCapacity(),
                 getOperatingSystem());

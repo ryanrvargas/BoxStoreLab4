@@ -20,6 +20,7 @@ public class Phone extends ElectronicsItem {
      * @param price      The price of the phone.
      * @param quantity   The available stock quantity.
      * @param brand      The brand of the phone.
+     * @param description The description of the phone
      * @param screenType The type of screen (e.g., OLED, LCD).
      * @param touchScreen Indicates if the phone has a touchscreen.
      * @param bluetooth  Indicates if the phone supports Bluetooth.
@@ -28,9 +29,9 @@ public class Phone extends ElectronicsItem {
      * @param model      The model name of the phone.
      * @param storage    The storage capacity of the phone in GB.
      */
-    public Phone(String name, double price, int quantity, String brand, String screenType, Boolean touchScreen,
+    public Phone(String name, double price, int quantity, String brand, String description, String screenType, Boolean touchScreen,
                  Boolean bluetooth, String color, String carrier, String model, int storage) {
-        super(name, price, quantity, brand, screenType, touchScreen, bluetooth);
+        super(name, price, quantity, brand, description, screenType, touchScreen, bluetooth);
         this.color = color;
         this.carrier = carrier;
         this.model = model;
@@ -147,7 +148,7 @@ public class Phone extends ElectronicsItem {
      */
     @Override
     public StoreItem cloneWithQuantity(int quantity) {
-        return new Phone(getName(), getPrice(), quantity, getBrand(),
+        return new Phone(getName(), getPrice(), quantity, getBrand(),getDescription(),
                 getScreenType(), getTouchScreen(), getBluetooth(),
                 getColor(), getCarrier(), getModel(), getStorage());
     }

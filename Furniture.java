@@ -19,6 +19,7 @@ public class Furniture extends HouseholdItem {
      * @param price         The price of the furniture item.
      * @param quantity      The available stock quantity.
      * @param brand         The brand of the furniture item.
+     * @param description   The description of the furniture item.
      * @param roomType      The room where the furniture is typically used.
      * @param dimensions    The dimensions of the furniture (e.g., "80x40x30 inches").
      * @param material      The material of the furniture (e.g., "Wood", "Metal").
@@ -29,10 +30,10 @@ public class Furniture extends HouseholdItem {
      * @param color         The color of the furniture.
      * @param assembled     Indicates if the furniture is pre-assembled.
      */
-    public Furniture(String name, double price, int quantity, String brand,
+    public Furniture(String name, double price, int quantity, String brand, String description,
                      String roomType, String dimensions, String material, int weight, boolean fragile,
                      String furnitureType, String style, String color, boolean assembled) {
-        super(name, price, quantity, brand, roomType, dimensions, material, weight, fragile);
+        super(name, price, quantity, brand, description, roomType, dimensions, material, weight, fragile);
         this.furnitureType = furnitureType;
         this.style = style;
         this.color = color;
@@ -150,7 +151,7 @@ public class Furniture extends HouseholdItem {
      */
     @Override
     public StoreItem cloneWithQuantity(int quantity) {
-        return new Furniture(getName(), getPrice(), quantity, getBrand(),
+        return new Furniture(getName(), getPrice(), quantity, getBrand(), getDescription(),
                 getRoomType(), getDimensions(), getMaterial(), getWeight(),
                 isFragile(), getFurnitureType(), getStyle(), getColor(), isAssembled());
     }

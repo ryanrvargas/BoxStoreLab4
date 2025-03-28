@@ -21,6 +21,7 @@ public class CleaningSupply extends HouseholdItem {
      * @param price         The price of the product.
      * @param quantity      The available stock quantity.
      * @param brand         The brand of the product.
+     * @param description   The description of the product
      * @param roomType      The room where the product is typically used.
      * @param dimensions    The dimensions of the product packaging.
      * @param material      The packaging material (e.g., "Plastic Bottle").
@@ -32,11 +33,11 @@ public class CleaningSupply extends HouseholdItem {
      * @param volume        The volume of the product in ounces or liters.
      * @param flammable     Indicates if the product is flammable.
      */
-    public CleaningSupply(String name, double price, int quantity, String brand,
+    public CleaningSupply(String name, double price, int quantity, String brand, String description,
                           String roomType, String dimensions, String material, int weight,
                           boolean fragile, boolean spray, String cleaningType, String scent,
                           double volume, boolean flammable) {
-        super(name, price, quantity, brand, roomType, dimensions, material, weight, fragile);
+        super(name, price, quantity, brand, description, roomType , dimensions, material, weight, fragile);
         this.spray = spray;
         this.cleaningType = cleaningType;
         this.scent = scent;
@@ -174,7 +175,7 @@ public class CleaningSupply extends HouseholdItem {
      */
     @Override
     public StoreItem cloneWithQuantity(int quantity) {
-        return new CleaningSupply(getName(), getPrice(), quantity, getBrand(),
+        return new CleaningSupply(getName(), getPrice(), quantity, getBrand(),getDescription(),
                 getRoomType(), getDimensions(), getMaterial(), getWeight(),
                 isFragile(), spray, getCleaningType(), scent,
                 getVolume(), flammable);

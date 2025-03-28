@@ -275,6 +275,8 @@ public class WQSVargas1Rivera2Hubbard3 {
                             scanner.nextLine();
                             System.out.print("Enter brand: ");
                             String fruitBrand = scanner.nextLine();
+                            System.out.print("Enter description: ");
+                            String fruitDescription = scanner.nextLine();
                             System.out.print("Enter weight: ");
                             double fruitWeight = scanner.nextDouble();
                             scanner.nextLine();
@@ -296,7 +298,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             System.out.print("Enter harvest date: ");
                             String fruitHarvestDate = scanner.nextLine();
 
-                            fruits.add(new Fruit(fruitName, fruitPrice, fruitQuantity, fruitBrand, fruitWeight, fruitOrganic, fruitOrigin, fruitCalories, fruitExpiration, fruitColor, fruitRipe, fruitHarvestDate));
+                            fruits.add(new Fruit(fruitName, fruitPrice, fruitQuantity, fruitBrand, fruitDescription, fruitWeight, fruitOrganic, fruitOrigin, fruitCalories, fruitExpiration, fruitColor, fruitRipe, fruitHarvestDate));
                             System.out.println("Fruit added.");
 
                             break;
@@ -313,6 +315,8 @@ public class WQSVargas1Rivera2Hubbard3 {
                             scanner.nextLine();
                             System.out.print("Enter brand: ");
                             String vegetableBrand = scanner.nextLine();
+                            System.out.print("Enter description: ");
+                            String vegetableDescription = scanner.nextLine();
                             System.out.print("Enter weight: ");
                             double vegetableWeight = scanner.nextDouble();
                             scanner.nextLine();
@@ -335,7 +339,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             System.out.print("Enter freshness level: ");
                             String vegetableFreshness = scanner.nextLine();
 
-                            vegetables.add(new Vegetable(vegetableName, vegetablePrice, vegetableQuantity, vegetableBrand, vegetableWeight, vegetableOrganic, vegetableOrigin, vegetableCalories, vegetableExpiration, vegetableColor, vegetableHarvestDate, vegetableStorage, vegetableFreshness));
+                            vegetables.add(new Vegetable(vegetableName, vegetablePrice, vegetableQuantity, vegetableBrand, vegetableDescription, vegetableWeight, vegetableOrganic, vegetableOrigin, vegetableCalories, vegetableExpiration, vegetableColor, vegetableHarvestDate, vegetableStorage, vegetableFreshness));
                             System.out.println("Vegetable added.");
                             break;
                         case 3:
@@ -351,6 +355,8 @@ public class WQSVargas1Rivera2Hubbard3 {
                             scanner.nextLine();
                             System.out.print("Enter brand: ");
                             String shelfStableBrand = scanner.nextLine();
+                            System.out.print("Enter description: ");
+                            String shelfStableDescription = scanner.nextLine();
                             System.out.print("Enter weight: ");
                             double shelfStableWeight = scanner.nextDouble();
                             scanner.nextLine();
@@ -373,7 +379,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             System.out.print("Enter container material: ");
                             String shelfStableContainerMaterial = scanner.nextLine();
 
-                            shelfStables.add(new ShelfStable(shelfStableName, shelfStablePrice, shelfStableQuantity, shelfStableBrand, shelfStableWeight, shelfStableOrganic, shelfStableOrigin, shelfStableCalories, shelfStableExpiration, shelfStablePackaging, shelfStableManufacturingDate, shelfStableWarnings, shelfStableContainerMaterial));
+                            shelfStables.add(new ShelfStable(shelfStableName, shelfStablePrice, shelfStableQuantity, shelfStableBrand,shelfStableDescription, shelfStableWeight, shelfStableOrganic, shelfStableOrigin, shelfStableCalories, shelfStableExpiration, shelfStablePackaging, shelfStableManufacturingDate, shelfStableWarnings, shelfStableContainerMaterial));
                             System.out.println("ShelfStable item added.");
                             break;
                         default:
@@ -405,6 +411,8 @@ public class WQSVargas1Rivera2Hubbard3 {
                             scanner.nextLine();
                             System.out.print("Enter brand: ");
                             String laptopBrand = scanner.nextLine();
+                            System.out.print("Enter description: ");
+                            String laptopDescription = scanner.nextLine();
                             System.out.print("Enter screen type: ");
                             String laptopScreenType = scanner.nextLine();
                             System.out.print("Is it touchscreen? (true/false): ");
@@ -424,7 +432,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             int batteryCapacity = scanner.nextInt();
                             scanner.nextLine();
 
-                            laptops.add(new Laptop(laptopName, laptopPrice, laptopQuantity, laptopBrand, laptopScreenType, laptopTouchScreen, laptopBluetooth, processor, ramSize, batteryCapacity, operatingSystem));
+                            laptops.add(new Laptop(laptopName, laptopPrice, laptopQuantity, laptopBrand,laptopDescription, laptopScreenType, laptopTouchScreen, laptopBluetooth, processor, ramSize, batteryCapacity, operatingSystem));
                             System.out.println("Laptop added.");
                             break;
                         case 2:
@@ -440,6 +448,8 @@ public class WQSVargas1Rivera2Hubbard3 {
                             scanner.nextLine();
                             System.out.print("Enter brand: ");
                             String phoneBrand = scanner.nextLine();
+                            System.out.print("Enter description: ");
+                            String phoneDescription = scanner.nextLine();
                             System.out.print("Enter screen type: ");
                             String phoneScreenType = scanner.nextLine();
                             System.out.print("Is it touchscreen? (true/false): ");
@@ -458,7 +468,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             int storageCapacity = scanner.nextInt();
                             scanner.nextLine();
 
-                            phones.add(new Phone(phoneName, phonePrice, phoneQuantity, phoneBrand, phoneScreenType, phoneTouchScreen, phoneBluetooth, phoneColor, carrier, phoneModel, storageCapacity));
+                            phones.add(new Phone(phoneName, phonePrice, phoneQuantity, phoneBrand, phoneDescription, phoneScreenType, phoneTouchScreen, phoneBluetooth, phoneColor, carrier, phoneModel, storageCapacity));
                             System.out.println("Phone added.");
                             break;
                         case 3:
@@ -474,6 +484,8 @@ public class WQSVargas1Rivera2Hubbard3 {
                             scanner.nextLine();
                             System.out.print("Enter brand: ");
                             String tvBrand = scanner.nextLine();
+                            System.out.print("Enter description: ");
+                            String tvDescription = scanner.nextLine();
                             System.out.print("Enter model: ");
                             String tvModel = scanner.nextLine();
                             System.out.print("Enter resolution (e.g., 4K, 1080p): ");
@@ -485,7 +497,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             boolean smartTV = scanner.nextBoolean();
                             scanner.nextLine();
 
-                            tvs.add(new TV(tvName, tvPrice, tvQuantity, tvBrand, tvModel, resolution, screenSize, smartTV));
+                            tvs.add(new TV(tvName, tvPrice, tvQuantity, tvBrand, tvDescription, tvModel, resolution, screenSize, smartTV));
                             System.out.println("TV added.");
                             break;
                         default:
@@ -517,6 +529,8 @@ public class WQSVargas1Rivera2Hubbard3 {
                             scanner.nextLine();
                             System.out.print("Enter brand: ");
                             String shirtBrand = scanner.nextLine();
+                            System.out.print("Enter description: ");
+                            String shirtDescription = scanner.nextLine();
                             System.out.print("Enter size: ");
                             String shirtSize = scanner.nextLine();
                             System.out.print("Enter color: ");
@@ -529,7 +543,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             boolean shirtDesign = scanner.nextBoolean();
                             scanner.nextLine();
 
-                            shirts.add(new Shirt(shirtName, shirtPrice, shirtQuantity, shirtBrand, shirtSize, shirtColor, shirtOccasion, shirtMaterial, shirtDesign));
+                            shirts.add(new Shirt(shirtName, shirtPrice, shirtQuantity, shirtBrand,shirtDescription, shirtSize, shirtColor, shirtOccasion, shirtMaterial, shirtDesign));
                             System.out.println("Shirt added.");
                             break;
                         case 2:
@@ -545,6 +559,8 @@ public class WQSVargas1Rivera2Hubbard3 {
                             scanner.nextLine();
                             System.out.print("Enter brand: ");
                             String shoeBrand = scanner.nextLine();
+                            System.out.print("Enter description: ");
+                            String shoeDescription = scanner.nextLine();
                             System.out.print("Enter shoe size (as String): ");
                             String shoeSize = scanner.nextLine();
                             System.out.print("Enter occasion: ");
@@ -557,7 +573,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             System.out.print("Is it high-top or low-top? ");
                             String highOrLow = scanner.nextLine();
 
-                            shoes.add(new Shoe(shoeName, shoePrice, shoeQuantity, shoeBrand, shoeSize, shoeOccasion, maleOrFemale, laces, highOrLow));
+                            shoes.add(new Shoe(shoeName, shoePrice, shoeQuantity, shoeBrand,shoeDescription, shoeSize, shoeOccasion, maleOrFemale, laces, highOrLow));
                             System.out.println("Shoe added.");
                             break;
                         case 3:
@@ -573,6 +589,8 @@ public class WQSVargas1Rivera2Hubbard3 {
                             scanner.nextLine();
                             System.out.print("Enter brand: ");
                             String outerwearBrand = scanner.nextLine();
+                            System.out.print("Enter description: ");
+                            String outerDescription = scanner.nextLine();
                             System.out.print("Enter material: ");
                             String outerwearMaterial = scanner.nextLine();
                             System.out.print("Enter size: ");
@@ -588,7 +606,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             boolean hooded = scanner.nextBoolean();
                             scanner.nextLine();
 
-                            outerwears.add(new Outerwear(outerwearName, outerwearPrice, outerwearQuantity, outerwearBrand, outerwearMaterial, outerwearSize, outerwearSeason, outerwearCategory, isWaterProof, hooded));
+                            outerwears.add(new Outerwear(outerwearName, outerwearPrice, outerwearQuantity, outerwearBrand, outerDescription,outerwearMaterial, outerwearSize, outerwearSeason, outerwearCategory, isWaterProof, hooded));
                             System.out.println("Outerwear added.");
                             break;
                         default:
@@ -623,6 +641,9 @@ public class WQSVargas1Rivera2Hubbard3 {
                             System.out.print("Enter brand: ");
                             String brand = scanner.nextLine();
 
+                            System.out.print("Enter description: ");
+                            String furnitureDescription = scanner.nextLine();
+
                             System.out.print("Enter room type (e.g., Living Room, Bedroom): ");
                             String roomType = scanner.nextLine();
 
@@ -654,7 +675,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             scanner.nextLine(); //Consume newline
 
                             // Create the Furniture object
-                            Furniture furniture = new Furniture(name, price, quantity, brand, roomType, dimensions, material, (int) weight, fragile, furnitureType, style, color, assembled);
+                            Furniture furniture = new Furniture(name, price, quantity, brand, furnitureDescription,roomType, dimensions, material, (int) weight, fragile, furnitureType, style, color, assembled);
                             System.out.println("Furniture item added.");
                             break;
                         case 2:
@@ -673,6 +694,9 @@ public class WQSVargas1Rivera2Hubbard3 {
 
                             System.out.print("Enter brand: ");
                             brand = scanner.nextLine();
+
+                            System.out.print("Enter description: ");
+                            String cleaningDescription = scanner.nextLine();
 
                             System.out.print("Enter room type (e.g., Kitchen, Bathroom): ");
                             roomType = scanner.nextLine();
@@ -710,7 +734,7 @@ public class WQSVargas1Rivera2Hubbard3 {
                             scanner.nextLine();//Consume newline
 
                             //Create the CleaningSupply object
-                            CleaningSupply cleaningSupply = new CleaningSupply(name, price, quantity, brand, roomType, dimensions, material, (int) weight, fragile, spray, cleaningType, scent, volume, flammable);
+                            CleaningSupply cleaningSupply = new CleaningSupply(name, price, quantity, brand,cleaningDescription, roomType, dimensions, material, (int) weight, fragile, spray, cleaningType, scent, volume, flammable);
                             System.out.println("Cleaning supply added.");
                             break;
 

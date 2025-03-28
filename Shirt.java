@@ -24,14 +24,15 @@ public class Shirt extends StoreItem {
      * @param price         The price of the shirt
      * @param quantity      The quantity of the shirt
      * @param brand         The brand of the shirt
+     * @param description   The description of the shirt
      * @param size          The size of the shirt
      * @param color         The color of the shirt
      * @param occasion      The occasion of the shirt
      * @param material      The material of the shirt
      * @param design        The design of the shirt
      */
-    public Shirt (String name, double price, int quantity, String brand, String size, String color, String occasion, String material, boolean design){
-        super(name, price, quantity, brand);
+    public Shirt (String name, double price, int quantity, String brand,String description, String size, String color, String occasion, String material, boolean design){
+        super(name, price, quantity, brand,description);
         this.size = size;
         this.color = color;
         this.occasion = occasion;
@@ -121,7 +122,7 @@ public class Shirt extends StoreItem {
      */
     @Override
     public StoreItem cloneWithQuantity(int quantity) {
-        return new Shirt(getName(), getPrice(), quantity, getBrand(),
+        return new Shirt(getName(), getPrice(), quantity, getBrand(),getDescription(),
                 getSize(), getColor(), getOccasion(), getMaterial(), isDesign());
     }
 

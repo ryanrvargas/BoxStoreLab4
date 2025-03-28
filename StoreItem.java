@@ -35,13 +35,6 @@ public class StoreItem {
 
     }
 
-    public StoreItem(String name, double price, int quantity, String brand, String description) {
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
-        this.brand = (brand != null) ? brand : "Generic";
-        this.description = description;
-    }
 
     /**
      * Default constructor for Store.

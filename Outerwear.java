@@ -17,20 +17,21 @@ public class Outerwear extends ClothingItem {
     /**
      * Constructs an Outerwear object with specified attributes.
      *
-     * @param name        The name of the outerwear item.
-     * @param price       The price of the outerwear item.
-     * @param quantity    The available stock quantity.
-     * @param brand       The brand of the outerwear item.
-     * @param material    The material type (e.g., wool, leather, synthetic).
-     * @param size        The size of the outerwear item (e.g., S, M, L, XL).
-     * @param season      The season for which the outerwear is designed (e.g., winter, fall).
-     * @param topOrBottom Specifies whether the outerwear is a "Top" or "Bottom".
-     * @param isWaterProof Indicates if the outerwear is waterproof.
-     * @param hooded      Indicates if the outerwear has a hood.
+     * @param name          The name of the outerwear item.
+     * @param price         The price of the outerwear item.
+     * @param quantity      The available stock quantity.
+     * @param brand         The brand of the outerwear item.
+     * @param description   The description of the outerwear item.
+     * @param material      The material type (e.g., wool, leather, synthetic).
+     * @param size          The size of the outerwear item (e.g., S, M, L, XL).
+     * @param season        The season for which the outerwear is designed (e.g., winter, fall).
+     * @param topOrBottom   Specifies whether the outerwear is a "Top" or "Bottom".
+     * @param isWaterProof  Indicates if the outerwear is waterproof.
+     * @param hooded        Indicates if the outerwear has a hood.
      */
-    public Outerwear(String name, double price, int quantity, String brand, String material, String size, String season, String topOrBottom,
+    public Outerwear(String name, double price, int quantity, String brand, String description, String material, String size, String season, String topOrBottom,
                      boolean isWaterProof, boolean hooded) {
-        super(name, price, quantity, brand, material, size, season, topOrBottom);
+        super(name, price, quantity, brand, description, material, size, season, topOrBottom);
         this.isWaterProof = isWaterProof;
         this.hooded = hooded;
     }
@@ -106,7 +107,7 @@ public class Outerwear extends ClothingItem {
      */
     @Override
     public StoreItem cloneWithQuantity(int quantity) {
-        return new Outerwear(getName(), getPrice(), quantity, getBrand(),
+        return new Outerwear(getName(), getPrice(), quantity, getBrand(),getDescription(),
                 getMaterial(), getSize(), getSeason(), getTopOrBottom(),
                 isWaterProof(), isHooded());
     }

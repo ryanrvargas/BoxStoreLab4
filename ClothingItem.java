@@ -16,17 +16,18 @@ public class ClothingItem extends StoreItem {
     /**
      * Constructs a ClothingItem object with specified attributes.
      *
-     * @param name       The name of the clothing item.
-     * @param price      The price of the clothing item.
-     * @param quantity   The available stock quantity.
-     * @param brand      The brand of the clothing item.
-     * @param material   The material type of the clothing (e.g., cotton, wool, polyester).
-     * @param size       The size of the clothing (e.g., S, M, L, XL).
-     * @param season     The season for which the clothing is designed (e.g., summer, winter).
-     * @param topOrBottom Specifies whether the clothing is a "Top" or "Bottom".
+     * @param name          The name of the clothing item.
+     * @param price         The price of the clothing item.
+     * @param quantity      The available stock quantity.
+     * @param brand         The brand of the clothing item.
+     * @param description   The description of the clothing item.
+     * @param material      The material type of the clothing (e.g., cotton, wool, polyester).
+     * @param size          The size of the clothing (e.g., S, M, L, XL).
+     * @param season        The season for which the clothing is designed (e.g., summer, winter).
+     * @param topOrBottom   Specifies whether the clothing is a "Top" or "Bottom".
      */
-    public ClothingItem(String name, double price, int quantity, String brand, String material, String size, String season, String topOrBottom) {
-        super(name, price, quantity, brand);
+    public ClothingItem(String name, double price, int quantity, String brand,String description, String material, String size, String season, String topOrBottom) {
+        super(name, price, quantity, brand,description);
         this.material = material;
         this.size = size;
         this.season = season;

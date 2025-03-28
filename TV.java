@@ -24,13 +24,14 @@ public class TV extends StoreItem{
      * @param price         The price of the TV
      * @param quantity      The quantity of the TV
      * @param brand         The brand of the TV
+     * @param description   The description of the TV
      * @param model         The model of the TV
      * @param resolution    The resolution of the TV
      * @param size          The size of the TV
      * @param smartTV       If the TV is smart or not (True or False)
      */
-    public TV (String name, double price, int quantity, String brand,  String model, String resolution, int size, boolean smartTV){
-        super(name, price, quantity, brand);
+    public TV (String name, double price, int quantity, String brand, String description, String model, String resolution, int size, boolean smartTV){
+        super(name, price, quantity, brand,description);
         this.model = model;
         this.resolution = resolution;
         this.size = size;
@@ -92,7 +93,7 @@ public class TV extends StoreItem{
      */
     @Override
     public StoreItem cloneWithQuantity(int quantity) {
-        return new TV(getName(), getPrice(), quantity, getBrand(),
+        return new TV(getName(), getPrice(), quantity, getBrand(),getDescription(),
                 getModel(), getResolution(), getSize(), isSmartTV());
     }
 

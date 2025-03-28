@@ -24,6 +24,7 @@ public class ShelfStable extends FoodItem {
      * @param price                 The price of the ShelfStable item
      * @param quantity              The quantity of the ShelfStable item
      * @param brand                 The brand of the ShelfStable item
+     * @param description           The description of the ShelfStable item
      * @param weight                The weight of the ShelfStable item
      * @param organic               If the ShelfStable item  is Organic or not
      * @param origin                The origin of the ShelfStable item
@@ -34,11 +35,11 @@ public class ShelfStable extends FoodItem {
      * @param allergyInfo           The allergy info of the ShelfStable item
      * @param packageType           The packaging of the ShelfStable item
      */
-    public ShelfStable (String name, double price, int quantity, String brand,
+    public ShelfStable (String name, double price, int quantity, String brand, String description,
              double weight, Boolean organic, String origin, int calories, String expirationDate,
              String type, String manufacturedDate, String allergyInfo, String packageType)
     {
-        super(name, price, quantity, brand, weight, organic, origin, calories, expirationDate);
+        super(name, price, quantity, brand,description, weight, organic, origin, calories, expirationDate);
         this.type = type;
         this.manufacturedDate = manufacturedDate;
         this.allergyInfo = allergyInfo;
@@ -150,7 +151,7 @@ public class ShelfStable extends FoodItem {
     @Override
     public StoreItem cloneWithQuantity(int quantity) {
         return new ShelfStable(
-                getName(), getPrice(), quantity, getBrand(),
+                getName(), getPrice(), quantity, getBrand(), getDescription(),
                 getWeight(), getOrganic(), getOrigin(), getCalories(),
                 getExpirationDate(), getType(), getManufacturedDate(),
                 getAllergyInfo(), getPackageType()

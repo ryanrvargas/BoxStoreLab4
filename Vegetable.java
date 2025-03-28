@@ -24,6 +24,7 @@ public class Vegetable extends FoodItem{
      * @param price                 The price of the vegetable
      * @param quantity              The number of vegetables
      * @param brand                 The brand of vegetable
+     * @param description           The description of the vegetable
      * @param weight                The weight of the vegetable
      * @param organic               If the vegetable is organic or not
      * @param origin                The origin of the vegetable
@@ -34,11 +35,11 @@ public class Vegetable extends FoodItem{
      * @param storageRequirements   The storage requirements of the vegetable
      * @param freshness             The freshness of the vegetable
      */
-    public Vegetable(String name, double price, int quantity, String brand,
+    public Vegetable(String name, double price, int quantity, String brand, String description,
                      double weight, Boolean organic, String origin,
                      int calories, String expirationDate, String color,
                      String harvestDate, String storageRequirements, String freshness) {
-        super(name, price, quantity, brand, weight, organic, origin, calories,expirationDate);
+        super(name, price, quantity, brand, description, weight, organic, origin, calories,expirationDate);
         this.color = color;
         this.harvestDate = harvestDate;
         this.storageRequirements = storageRequirements;
@@ -142,7 +143,7 @@ public class Vegetable extends FoodItem{
      */
     @Override
     public StoreItem cloneWithQuantity(int quantity) {
-        return new Vegetable(getName(), getPrice(), quantity, getBrand(),
+        return new Vegetable(getName(), getPrice(), quantity, getBrand(),getDescription(),
                 getWeight(), getOrganic(), getOrigin(), getCalories(),
                 getExpirationDate(), getColor(), getHarvestDate(),
                 getStorageRequirements(), getFreshness());

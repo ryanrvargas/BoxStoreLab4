@@ -25,14 +25,15 @@ public class Shoe extends StoreItem {
      * @param price                 The price of the shoe
      * @param quantity              The quantity of the shoe
      * @param brand                 The brand of the shoe
+     * @param description           The description of the shoe
      * @param size                  The size of the shoe
      * @param occasion              The occasion you'd wear the shoe
      * @param maleOrFemale          Male of Female size for the shoe
      * @param laces                 The laces of the shoe
      * @param hightopOrLowtop       If the shoe is high or low
      */
-    public Shoe (String name, double price, int quantity, String brand, String size, String occasion, String maleOrFemale, boolean laces, String hightopOrLowtop){
-        super(name, price, quantity, brand);
+    public Shoe (String name, double price, int quantity, String brand,String description, String size, String occasion, String maleOrFemale, boolean laces, String hightopOrLowtop){
+        super(name, price, quantity, brand,description);
         this.size = size;
         this.occasion = occasion;
         this.maleOrFemale = maleOrFemale;
@@ -105,7 +106,7 @@ public class Shoe extends StoreItem {
      */
     @Override
     public StoreItem cloneWithQuantity(int quantity) {
-        return new Shoe(getName(), getPrice(), quantity, getBrand(),
+        return new Shoe(getName(), getPrice(), quantity, getBrand(),getDescription(),
                 getSize(), getOccasion(), getMaleOrFemale(), isLaces(), getHightopOrLowtop());
     }
 

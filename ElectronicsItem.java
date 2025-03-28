@@ -19,13 +19,14 @@ public class ElectronicsItem extends StoreItem {
      * @param price      The price of the electronic item.
      * @param quantity   The available stock quantity.
      * @param brand      The brand of the electronic item.
+     * @param description The description of the electronic item
      * @param screenType The type of screen (e.g., LED, OLED, LCD).
      * @param touchScreen Indicates if the item has a touchscreen.
      * @param bluetooth  Indicates if the item supports Bluetooth.
      */
-    public ElectronicsItem(String name, double price, int quantity, String brand,
+    public ElectronicsItem(String name, double price, int quantity, String brand, String description,
                            String screenType, Boolean touchScreen, Boolean bluetooth) {
-        super(name, price, quantity, brand);
+        super(name, price, quantity, brand,description);
         this.touchScreen = touchScreen;
         this.screenType = screenType;
         this.bluetooth = bluetooth;

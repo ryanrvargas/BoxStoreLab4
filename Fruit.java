@@ -26,6 +26,7 @@ public class Fruit extends FoodItem {
      * @param price             The price of the fruit
      * @param quantity          The amount of fruit
      * @param brand             The brand of fruit
+     * @param description       The description of the fruit
      * @param weight            The weight of fruit
      * @param organic           If the fruit is organic or not
      * @param origin            The country of origin of the fruit
@@ -35,10 +36,10 @@ public class Fruit extends FoodItem {
      * @param ripe              Whether the fruit is ripe or not
      * @param harvestDate       The harvest Date of the fruit
      */
-    public Fruit (String name, double price, int quantity, String brand,
+    public Fruit (String name, double price, int quantity, String brand, String description,
                         double weight, Boolean organic, String origin, int calories, String expirationDate,
                          String color, Boolean ripe, String harvestDate) {
-        super(name, price, quantity, brand, weight, organic, origin, calories, expirationDate);
+        super(name, price, quantity, brand, description, weight, organic, origin, calories, expirationDate);
         this.color = color;
         this.ripe = ripe;
         this.harvestDate = harvestDate;
@@ -130,7 +131,7 @@ public class Fruit extends FoodItem {
      */
     @Override
     public StoreItem cloneWithQuantity(int quantity) {
-        return new Fruit(getName(), getPrice(), quantity, getBrand(),
+        return new Fruit(getName(), getPrice(), quantity, getBrand(),getDescription(),
                 getWeight(), getOrganic(), getOrigin(), getCalories(),
                 getExpirationDate(), getColor(), getRipe(), getHarvestDate());
     }
