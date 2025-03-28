@@ -97,4 +97,18 @@ public class Outerwear extends ClothingItem {
                 "\nIs waterproof: " + isWaterProof +
                 " | Hooded: " + hooded;
     }
+
+    /**
+     * Creates a copy of Outerwear item with a new quantity
+     *
+     * @param quantity The quantity to assign to the cloned item.
+     * @return A new Outerwear object with data and updated quantity
+     */
+    @Override
+    public StoreItem cloneWithQuantity(int quantity) {
+        return new Outerwear(getName(), getPrice(), quantity, getBrand(),
+                getMaterial(), getSize(), getSeason(), getTopOrBottom(),
+                isWaterProof(), isHooded());
+    }
+
 }

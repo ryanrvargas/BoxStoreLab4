@@ -130,7 +130,7 @@ public class ShelfStable extends FoodItem {
      * Return a string representation of the ShelfStable object, including item details
      * from parent classes and additional shelf stable specific attributes
      *
-     * @return
+     * @return A formatted string containing Fruit details
      */
     @Override
     public String toString() {
@@ -140,4 +140,23 @@ public class ShelfStable extends FoodItem {
                 " | Allergy Info: " + allergyInfo +
                 " | Package Type: " + packageType;
     }
+
+    /**
+     * Creates a copy of this Shelf-Stable item with a new quantity
+     *
+     * @param quantity The quantity to assign to the cloned item.
+     * @return A new Shelf-Stable object with the same data and updated quantity
+     */
+    @Override
+    public StoreItem cloneWithQuantity(int quantity) {
+        return new ShelfStable(
+                getName(), getPrice(), quantity, getBrand(),
+                getWeight(), getOrganic(), getOrigin(), getCalories(),
+                getExpirationDate(), getType(), getManufacturedDate(),
+                getAllergyInfo(), getPackageType()
+        );
+    }
+
+
+
 }

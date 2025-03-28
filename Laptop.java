@@ -140,4 +140,19 @@ public class Laptop extends ElectronicsItem {
                 " | Battery Capacity: " + batteryCapacity + "Wh" +
                 " | Processor: " + processor;
     }
+
+    /**
+     * Creates a copy of this Laptop item with a new quantity
+     *
+     * @param quantity The quantity to assign to the cloned item.
+     * @return a new Laptop object with the same data and updated quantity
+     */
+    @Override
+    public StoreItem cloneWithQuantity(int quantity) {
+        return new Laptop(getName(), getPrice(), quantity, getBrand(),
+                getScreenType(), getTouchScreen(), getBluetooth(),
+                getProcessor(), getRamSize(), getBatteryCapacity(),
+                getOperatingSystem());
+    }
+
 }

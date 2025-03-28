@@ -14,33 +14,33 @@ public class StoreItem {
     private double price;
     private int quantity;
     private String brand;
-    private String category;
-    private String returnPolicy;
+    private String description;
 
 
     /**
      * Constructs a Store object with specified attributes.
      *
-     * @param name     The name of the product.
-     * @param price    The price of the product.
-     * @param quantity The available stock quantity.
-     * @param brand    The brand of the product. Defaults to "Generic" if null.
+     * @param name          The name of the product.
+     * @param price         The price of the product.
+     * @param quantity      The available stock quantity.
+     * @param brand         The brand of the product. Defaults to "Generic" if null.
+     * @param description   The description of the product
      */
-    public StoreItem(String name, double price, int quantity, String brand, String category, String returnPolicy) {
+    public StoreItem(String name, double price, int quantity, String brand, String description) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.brand = (brand != null) ? brand : "Generic";
-        this.category = category;
-        this.returnPolicy =  (returnPolicy != null) ? returnPolicy : "None" ;
+        this.description = description;
+
     }
 
-    public StoreItem(String name, double price, int quantity, String brand) {
+    public StoreItem(String name, double price, int quantity, String brand, String description) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.brand = (brand != null) ? brand : "Generic";
-
+        this.description = description;
     }
 
     /**
@@ -52,8 +52,7 @@ public class StoreItem {
         this.price = 0;
         this.quantity = 0;
         this.brand = "Generic";
-        this.category = "Unknown";
-        this.returnPolicy = "None";
+        this.description = "Generic";
     }
 
     /**
@@ -62,7 +61,7 @@ public class StoreItem {
      * @return A string representation of the product, including name, brand, price, and stock quantity.
      */
     public String toString() {
-        return name + " by " + brand + " - $" + String.format("%.2f", price) + " (Stock: " + quantity + ")"  + "(Category: " + category + ")" + "(Return Policy: " + returnPolicy +")";
+        return name + " by " + brand + " - $" + String.format("%.2f", price) + " (Stock: " + quantity + ")" + "Description: " + description;
     }
 
     // =================== Getters ===================
@@ -104,16 +103,11 @@ public class StoreItem {
     }
 
     /**
-     * Retrieves the category of the product.
-     * @return the category of item
+     * Retrieves description of the product
+     *
+     * @return The description of the product.
      */
-    public String getCategory() {return category;}
-
-    /**
-     * Retrieves return policy of the item
-     * @return the return policy of the item
-     */
-    public String getReturnPolicy(){return returnPolicy;}
+    public String getDescription() { return description;}
 
     // =================== Setters ===================
 
@@ -154,17 +148,21 @@ public class StoreItem {
     }
 
     /**
-     * Set's the category of the item
+     * Sets the description of the product
      *
-     * @param category the category of the item
+     * @param description the description of the product
      */
-    public void setCategory(String category){this.category = category;}
+    public void setDescription(String description) {this.description = description;}
 
     /**
-     * Set's the return policy of the item
+     * This method is used to simulate adding a specific quantity of an item to a shopping cart
+     * while preserving the original inventory item in the store.
      *
-     * @param returnPolicy the return policy of the item
+     * @param quantity The quantity to assign to the cloned item.
+     * @return A new StoreItem object with the same properties but updated quantity.
      */
-    public void setReturnPolicy(String returnPolicy){this.returnPolicy = returnPolicy;}
+    public StoreItem cloneWithQuantity(int quantity) {
+        throw new UnsupportedOperationException("cloneWithQuantity() must be implemented in subclass.");
+    }
 
 }

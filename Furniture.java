@@ -141,4 +141,19 @@ public class Furniture extends HouseholdItem {
                 " | Color: " + getColor() +
                 " | Assembled: " + isAssembled();
     }
+
+    /**
+     * Creates a new Furniture item and with a new quantity
+     *
+     * @param quantity The quantity to assign to the cloned item.
+     * @return A new furniture object with the same data and updated quantity
+     */
+    @Override
+    public StoreItem cloneWithQuantity(int quantity) {
+        return new Furniture(getName(), getPrice(), quantity, getBrand(),
+                getRoomType(), getDimensions(), getMaterial(), getWeight(),
+                isFragile(), getFurnitureType(), getStyle(), getColor(), isAssembled());
+    }
+
+
 }

@@ -107,6 +107,12 @@ public class Fruit extends FoodItem {
         return harvestDate;
     }
 
+    /**
+     * Returns a string representation of the Fruit object, including product details
+     * from FoodItem and additional Fruit-specific attributes.
+     *
+     * @return A formatted string containing Fruit details.
+     */
     @Override
     public String toString(){
         return super.toString() +
@@ -114,5 +120,18 @@ public class Fruit extends FoodItem {
                 " | Ripe: " + ripe +
                 " | Harvest Date: " + harvestDate;
 
+    }
+
+    /**
+     * Creates a new copy of Fruit item with a new quantity
+     *
+     * @param quantity The quantity to assign to the cloned item.
+     * @return A new Fruit object with the same data and updated quantity
+     */
+    @Override
+    public StoreItem cloneWithQuantity(int quantity) {
+        return new Fruit(getName(), getPrice(), quantity, getBrand(),
+                getWeight(), getOrganic(), getOrigin(), getCalories(),
+                getExpirationDate(), getColor(), getRipe(), getHarvestDate());
     }
 }

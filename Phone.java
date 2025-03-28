@@ -139,4 +139,17 @@ public class Phone extends ElectronicsItem {
                 " | Model: " + model +
                 " | Storage: " + storage + "GB";
     }
+    /**
+     * Creates a copy of this Phone item with a new quantity
+     *
+     * @param quantity The quantity for the cloned item.
+     * @return A new Phone object with the same data and updated quantity
+     */
+    @Override
+    public StoreItem cloneWithQuantity(int quantity) {
+        return new Phone(getName(), getPrice(), quantity, getBrand(),
+                getScreenType(), getTouchScreen(), getBluetooth(),
+                getColor(), getCarrier(), getModel(), getStorage());
+    }
+
 }

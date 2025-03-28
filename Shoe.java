@@ -21,15 +21,15 @@ public class Shoe extends StoreItem {
 
     /**
      * constructor to initialize shoe with given parameters
-     * @param name
-     * @param price
-     * @param quantity
-     * @param brand
-     * @param size
-     * @param occasion
-     * @param maleOrFemale
-     * @param laces
-     * @param hightopOrLowtop
+     * @param name                  The name of the shoe
+     * @param price                 The price of the shoe
+     * @param quantity              The quantity of the shoe
+     * @param brand                 The brand of the shoe
+     * @param size                  The size of the shoe
+     * @param occasion              The occasion you'd wear the shoe
+     * @param maleOrFemale          Male of Female size for the shoe
+     * @param laces                 The laces of the shoe
+     * @param hightopOrLowtop       If the shoe is high or low
      */
     public Shoe (String name, double price, int quantity, String brand, String size, String occasion, String maleOrFemale, boolean laces, String hightopOrLowtop){
         super(name, price, quantity, brand);
@@ -96,6 +96,17 @@ public class Shoe extends StoreItem {
         return super.toString() + ".\nShoe size is: " + getSize() +
                 " | Occasion is: " + getOccasion() +
                 " | Male or Female shoe: " + getMaleOrFemale() + " | Has laces: " + isLaces() + " | Is shoe a hightop or lowtop: " + getHightopOrLowtop() ;
+    }
+
+    /**
+     * Creates a copy of this Shoe item with a new quantity
+     * @param quantity The quantity to assign to the cloned item.
+     * @return A new Shoe object with the same data and updated quantity
+     */
+    @Override
+    public StoreItem cloneWithQuantity(int quantity) {
+        return new Shoe(getName(), getPrice(), quantity, getBrand(),
+                getSize(), getOccasion(), getMaleOrFemale(), isLaces(), getHightopOrLowtop());
     }
 
 }

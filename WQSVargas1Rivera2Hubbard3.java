@@ -110,6 +110,44 @@ public class WQSVargas1Rivera2Hubbard3 {
             System.out.println("Order canceled. Returning to main menu.");
         }
     }
+    private ArrayList<? extends StoreItem> getItemListByCategory(String category) {
+        switch (category) {
+            case "Food":
+                ArrayList<StoreItem> foodItems = new ArrayList<>();
+                foodItems.addAll(fruits);
+                foodItems.addAll(vegetables);
+                foodItems.addAll(shelfStables);
+                return foodItems;
+
+            case "Electronics":
+                ArrayList<StoreItem> electronicItems = new ArrayList<>();
+                electronicItems.addAll(laptops);
+                electronicItems.addAll(phones);
+                electronicItems.addAll(tvs);
+                return electronicItems;
+
+            case "Clothing":
+                ArrayList<StoreItem> clothingItems = new ArrayList<>();
+                clothingItems.addAll(shirts);
+                clothingItems.addAll(shoes);
+                clothingItems.addAll(outerwears);
+                return clothingItems;
+
+            case "Household":
+                ArrayList<StoreItem> householdItems = new ArrayList<>();
+                householdItems.addAll(furnitureItems);
+                householdItems.addAll(cleaningSupplies);
+                return householdItems;
+
+            default:
+                return new ArrayList<>(); // Return empty list if category doesn't match
+        }
+    }
+
+    private StoreItem createCartItem(StoreItem originalItem, int quantity) {
+        return originalItem.cloneWithQuantity(quantity);
+    }
+
 
     private void printTable(ArrayList<? extends StoreItem> items, String category) {
         System.out.println("\n--- " + category + " Items ---");

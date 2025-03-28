@@ -133,4 +133,19 @@ public class Vegetable extends FoodItem{
                 " | Storage Requirements: " + storageRequirements +
                 " | Freshness: " + freshness ;
     }
+
+    /**
+     * Creates a copy of this Vegetable item with a new quantity
+     *
+     * @param quantity The quantity to assign to the cloned item.
+     * @return A new vegetable object with the same data and updated quantity
+     */
+    @Override
+    public StoreItem cloneWithQuantity(int quantity) {
+        return new Vegetable(getName(), getPrice(), quantity, getBrand(),
+                getWeight(), getOrganic(), getOrigin(), getCalories(),
+                getExpirationDate(), getColor(), getHarvestDate(),
+                getStorageRequirements(), getFreshness());
+    }
+
 }

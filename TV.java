@@ -20,14 +20,14 @@ public class TV extends StoreItem{
 
     /**
      * constructor to initialize tv with given parameters
-     * @param name
-     * @param price
-     * @param quantity
-     * @param brand
-     * @param model
-     * @param resolution
-     * @param size
-     * @param smartTV
+     * @param name          The name of the TV
+     * @param price         The price of the TV
+     * @param quantity      The quantity of the TV
+     * @param brand         The brand of the TV
+     * @param model         The model of the TV
+     * @param resolution    The resolution of the TV
+     * @param size          The size of the TV
+     * @param smartTV       If the TV is smart or not (True or False)
      */
     public TV (String name, double price, int quantity, String brand,  String model, String resolution, int size, boolean smartTV){
         super(name, price, quantity, brand);
@@ -84,5 +84,17 @@ public class TV extends StoreItem{
                 " | Tv resolution is: " + getResolution() +
                 " | Tv size is: " + getSize() + " | Is Tv a smart tv: " + isSmartTV();
     }
+    /**
+     * Creates a copy of this TV item with a new quantity
+     *
+     * @param quantity The quantity for the cloned item.
+     * @return A new TV object with the same data and updated quantity
+     */
+    @Override
+    public StoreItem cloneWithQuantity(int quantity) {
+        return new TV(getName(), getPrice(), quantity, getBrand(),
+                getModel(), getResolution(), getSize(), isSmartTV());
+    }
+
 
 }

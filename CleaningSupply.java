@@ -165,4 +165,22 @@ public class CleaningSupply extends HouseholdItem {
                 " | Spray: " + isSpray() +
                 " | Flammable: " + getFlammableStatus();
     }
+
+    /**
+     * Creates a new CleaningSupply Item and new quantity
+     *
+     * @param quantity The quantity to assign to the cloned item.
+     * @return a new CleaningSupply object with the same data with updated quantity
+     */
+    @Override
+    public StoreItem cloneWithQuantity(int quantity) {
+        return new CleaningSupply(getName(), getPrice(), quantity, getBrand(),
+                getRoomType(), getDimensions(), getMaterial(), getWeight(),
+                isFragile(), spray, getCleaningType(), scent,
+                getVolume(), flammable);
+    }
+
+
+
+
 }
