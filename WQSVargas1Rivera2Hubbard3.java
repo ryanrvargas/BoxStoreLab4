@@ -13,7 +13,9 @@ import javax.swing.*;
 import java.util.*;
 
 public class WQSVargas1Rivera2Hubbard3 {
-
+    /**
+     * Inventory lists for various item categories.
+     */
     static ArrayList<Fruit> fruits = new ArrayList<>();
     static ArrayList<Vegetable> vegetables = new ArrayList<>();
     static ArrayList<ShelfStable> shelfStables = new ArrayList<>();
@@ -25,7 +27,10 @@ public class WQSVargas1Rivera2Hubbard3 {
     static ArrayList<Laptop> laptops = new ArrayList<>();
     static ArrayList<Phone> phones = new ArrayList<>();
     static ArrayList<TV> tvs = new ArrayList<>();
-
+    /**
+     * Handles the item selling process by displaying categories, adding selected items to cart,
+     * calculating totals, and showing order summaries.
+     */
     public void sellItem() {
         Scanner scanner = new Scanner(System.in);
         ArrayList<StoreItem> shoppingCart = new ArrayList<>();
@@ -121,6 +126,11 @@ public class WQSVargas1Rivera2Hubbard3 {
             System.out.println("Order canceled. Returning to main menu.");
         }
     }
+    /**
+     * Returns a combined list of StoreItems based on the selected category.
+     * @param category The item category name.
+     * @return A list of StoreItems from that category.
+     */
     private ArrayList<? extends StoreItem> getItemListByCategory(String category) {
         switch (category) {
             case "Food":
@@ -154,12 +164,21 @@ public class WQSVargas1Rivera2Hubbard3 {
                 return new ArrayList<>(); // Return empty list if category doesn't match
         }
     }
-
+    /**
+     * Creates a copy of the selected StoreItem with the specified quantity.
+     * @param originalItem The original StoreItem.
+     * @param quantity The desired quantity for the cart.
+     * @return A new StoreItem with the quantity set.
+     */
     private StoreItem createCartItem(StoreItem originalItem, int quantity) {
         return originalItem.cloneWithQuantity(quantity);
     }
 
-
+    /**
+     * Displays a formatted table of items for the selected category.
+     * @param items List of items to display.
+     * @param category Name of the category.
+     */
     private void printTable(ArrayList<? extends StoreItem> items, String category) {
         System.out.println("\n--- " + category + " Items ---");
         System.out.printf("%-4s %-20s %-10s %-15s %-40s\n", "#", "Name", "Price", "Brand", "Description");
@@ -171,7 +190,10 @@ public class WQSVargas1Rivera2Hubbard3 {
                     (i + 1), item.getName(), item.getPrice(), brand, desc);
         }
     }
-
+    /**
+     * Prints a grouped order summary based on item types.
+     * @param cart List of items in the shopping cart.
+     */
     private void printOrderSummary(ArrayList<StoreItem> cart) {
         System.out.println("\n===== ORDER SUMMARY =====");
         Map<String, List<StoreItem>> grouped = new HashMap<>();
@@ -191,7 +213,10 @@ public class WQSVargas1Rivera2Hubbard3 {
             }
         }
     }
-
+    /**
+     * Calculates and prints subtotal, tax, and total cost of the order.
+     * @param cart The shopping cart containing purchased items.
+     */
     private void calculateTotal(ArrayList<StoreItem> cart) {
         double foodTax = 0.02;
         double nonFoodTax = 0.07;
@@ -211,12 +236,19 @@ public class WQSVargas1Rivera2Hubbard3 {
         System.out.printf("Tax:      $%.2f\n", taxTotal);
         System.out.printf("Total:    $%.2f\n", total);
     }
-
+    /**
+     * Determines if a StoreItem is a food item.
+     * @param item The StoreItem to check.
+     * @return true if it is a food item, false otherwise.
+     */
     private boolean isFood(StoreItem item) {
         return item instanceof Fruit || item instanceof Vegetable || item instanceof ShelfStable;
     }
 
-
+    /**
+     * Displays return policies based on the categories of purchased items.
+     * @param categories List of category names from the purchase.
+     */
     private void displayReturnPolicyForCategories(List<String> categories) {
         System.out.println("\n===== RETURN POLICIES =====");
 
@@ -240,12 +272,10 @@ public class WQSVargas1Rivera2Hubbard3 {
         }
     }
 
-
-
-
-
-
-
+    /**
+     * Handles the item addition process for all supported categories.
+     * Prompts the user for input and adds new items to inventory lists.
+     */
     public void addItem() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -764,7 +794,9 @@ public class WQSVargas1Rivera2Hubbard3 {
     }
 
 
-
+    /**
+     * Displays the main menu for user interaction.
+     */
     public static void displayMenu() {
         System.out.println("The Wilmington Quick Shop. Select category:");
         System.out.println("1. Add an item to the shop");
@@ -772,7 +804,9 @@ public class WQSVargas1Rivera2Hubbard3 {
         System.out.println("3. Exit Shop ");
         System.out.print("Enter your selection: ");
     }
-
+    /**
+     * Prints the entire store inventory grouped by item categories.
+     */
     public void printInventory() {
         System.out.println("\n========= STORE INVENTORY =========");
 
@@ -792,7 +826,12 @@ public class WQSVargas1Rivera2Hubbard3 {
 
         System.out.println("\n========= END OF INVENTORY =========\n");
     }
-
+    /**
+     * Generic method to print a category list.
+     * @param list The list of items in that category.
+     * @param categoryName The name of the category.
+     * @param <T> Type extending StoreItem.
+     */
     private <T> void printCategory(ArrayList<T> list, String categoryName) {
         if (!list.isEmpty()) {
             System.out.println("\n--- " + categoryName + " ---");
@@ -805,7 +844,11 @@ public class WQSVargas1Rivera2Hubbard3 {
         }
     }
 
-
+    /**
+     * Main method to run the shopping application.
+     * Displays the menu and handles user selection.
+     * @param args Command-line arguments.
+     */
     public static void main(String[] args) {
         WQSVargas1Rivera2Hubbard3 manager = new WQSVargas1Rivera2Hubbard3();
         Scanner scanner = new Scanner(System.in);
