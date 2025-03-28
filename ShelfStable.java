@@ -61,7 +61,7 @@ public class ShelfStable extends FoodItem {
         this.packageType = null;
     }
 
-    // Setters
+    // =================== Setters ===================
 
     /**
      * Sets the type of the shelf stable item
@@ -99,7 +99,7 @@ public class ShelfStable extends FoodItem {
         this.packageType = packageType;
     }
 
-    // Getters
+    // =================== Getters ===================
 
     /**
      * Retrieves the type of shelf stable

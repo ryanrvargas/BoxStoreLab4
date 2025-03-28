@@ -41,50 +41,74 @@ public class Shoe extends StoreItem {
         this.hightopOrLowtop = hightopOrLowtop;
     }
 
-    /**
-     * retrives size, occasion, male or female, laces, hightop or lowtop of a shoe
-     * @return size
-     * @return occasion
-     * @return male or female
-     * @return laces
-     * @return hightop or lowtop
-     */
-    public String getSize() {return  size;}
-    public String getOccasion() {return occasion;}
-    public String getMaleOrFemale() {return maleOrFemale;}
-    public boolean isLaces() {return laces;}
-    public String getHightopOrLowtop() {return hightopOrLowtop;}
-
+    // =================== Setters ===================
     /**
      * updates the size of the shoe
-     * @param size
+     * @param size the size of the shoe
      */
     public void setSize(String size) {this.size = size;}
 
     /**
      * updates the occasion of the shoe
-     * @param occasion
+     * @param occasion the occasion of the shoe
      */
     public void setOccasion(String occasion) {this.occasion = occasion;}
 
     /**
      * updates if shoe is a male or female shoe
-     * @param maleOrFemale
+     * @param maleOrFemale whether its a male or female shoe
      */
     public void setMaleOrFemale(String maleOrFemale) {this.maleOrFemale = maleOrFemale;}
 
     /**
      * updates if shoe has laces or not
-     * @param laces
+     * @param laces if the shoe has laces (True or False)
      */
     public void setLaces(boolean laces) {this.laces = laces;}
 
     /**
      * updates if shoe is a hightop or lowtop
-     * @param hightopOrLowtop
+     * @param hightopOrLowtop if the shoe is high or low top
      */
     public void setHightopOrLowtop(String hightopOrLowtop) {this.hightopOrLowtop = hightopOrLowtop;}
 
+
+    // =================== Getters ===================
+
+    /**
+     * Retrieves size
+     *
+     * @return size of the shoe
+     */
+    public String getSize() {return  size;}
+
+    /**
+     * Retrieves the occasions of when to wear the shoe
+     *
+     * @return occasion the occasion of when to wear the shoe
+     */
+    public String getOccasion() {return occasion;}
+
+    /**
+     * Retrieves if the shoe is for male or females
+     *
+     * @return the gender that the shoe is made for
+     */
+    public String getMaleOrFemale() {return maleOrFemale;}
+
+    /**
+     * Retrieves if the shoe has laces
+     *
+     * @return laces if the shoe has laces or not (True or False)
+     */
+    public boolean isLaces() {return laces;}
+
+    /**
+     * Retrieves if the shoe is high or low top
+     *
+     * @return if the shoe is high or low top
+     */
+    public String getHightopOrLowtop() {return hightopOrLowtop;}
 
     /**
      * Returns a string representation of the ClothingItem object, including

@@ -46,43 +46,6 @@ public class ClothingItem extends StoreItem {
         this.topOrBottom = "";
     }
 
-    // =================== Getters ===================
-
-    /**
-     * Retrieves the material of the clothing item.
-     *
-     * @return The clothing material (e.g., cotton, wool, polyester).
-     */
-    public String getMaterial() {
-        return material;
-    }
-
-    /**
-     * Retrieves the size of the clothing item.
-     *
-     * @return The size of the clothing (e.g., S, M, L, XL).
-     */
-    public String getSize() {
-        return size;
-    }
-
-    /**
-     * Retrieves the season for which the clothing item is designed.
-     *
-     * @return The season (e.g., summer, winter, spring, fall).
-     */
-    public String getSeason() {
-        return season;
-    }
-
-    /**
-     * Retrieves whether the clothing item is a top or bottom.
-     *
-     * @return "Top" if the clothing item is worn on the upper body, "Bottom" if worn on the lower body.
-     */
-    public String getTopOrBottom() {
-        return topOrBottom;
-    }
 
     // =================== Setters ===================
 
@@ -121,6 +84,46 @@ public class ClothingItem extends StoreItem {
     public void setTopOrBottom(String topOrBottom) {
         this.topOrBottom = topOrBottom;
     }
+
+
+    // =================== Getters ===================
+
+    /**
+     * Retrieves the material of the clothing item.
+     *
+     * @return The clothing material (e.g., cotton, wool, polyester).
+     */
+    public String getMaterial() {
+        return material;
+    }
+
+    /**
+     * Retrieves the size of the clothing item.
+     *
+     * @return The size of the clothing (e.g., S, M, L, XL).
+     */
+    public String getSize() {
+        return size;
+    }
+
+    /**
+     * Retrieves the season for which the clothing item is designed.
+     *
+     * @return The season (e.g., summer, winter, spring, fall).
+     */
+    public String getSeason() {
+        return season;
+    }
+
+    /**
+     * Retrieves whether the clothing item is a top or bottom.
+     *
+     * @return "Top" if the clothing item is worn on the upper body, "Bottom" if worn on the lower body.
+     */
+    public String getTopOrBottom() {
+        return topOrBottom;
+    }
+
 
     /**
      * Returns a string representation of the ClothingItem object, including product details

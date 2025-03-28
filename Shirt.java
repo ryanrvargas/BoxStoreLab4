@@ -40,6 +40,42 @@ public class Shirt extends StoreItem {
         this.design = design;
     }
 
+    // =================== Setters ===================
+
+    /**
+     * updates the size of the shirt
+     * @param size the size of the shirt
+     */
+    public void setSize(String size) {this.size = size;}
+
+    /**
+     * updates the color of the shirt
+     * @param color the color of the shirt
+     */
+    public void setColor(String color) {this.color = color;}
+
+    /**
+     * updates the occasion of the shirt
+     * @param occasion the occasion of the shirt
+     */
+    public void setOccasion(String occasion) {this.occasion = occasion;}
+
+    /**
+     * updates the material of the shirt
+     * @param material the material of the shirt
+     */
+    public void setMaterial(String material) {this.material = material;}
+
+    /**
+     * updates if shirt has a design or not
+     * @param design the design of the shirt
+     */
+    public void setDesign(boolean design) {this.design = design;}
+
+
+    // =================== Getters ===================
+
+
     /**
      * Retrieves the size of the shirt
      *
@@ -71,35 +107,6 @@ public class Shirt extends StoreItem {
      */
     public boolean isDesign() {return design;}
 
-    /**
-     * updates the size of the shirt
-     * @param size the size of the shirt
-     */
-    public void setSize(String size) {this.size = size;}
-
-    /**
-     * updates the color of the shirt
-     * @param color the color of the shirt
-     */
-    public void setColor(String color) {this.color = color;}
-
-    /**
-     * updates the occasion of the shirt
-     * @param occasion the occasion of the shirt
-     */
-    public void setOccasion(String occasion) {this.occasion = occasion;}
-
-    /**
-     * updates the material of the shirt
-     * @param material the material of the shirt
-     */
-    public void setMaterial(String material) {this.material = material;}
-
-    /**
-     * updates if shirt has a design or not
-     * @param design the design of the shirt
-     */
-    public void setDesign(boolean design) {this.design = design;}
 
     /**
      * Returns a string representation of the ClothingItem object, including

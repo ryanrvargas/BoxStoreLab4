@@ -128,6 +128,7 @@ public class Furniture extends HouseholdItem {
         return assembled;
     }
 
+
     /**
      * Returns a string representation of the Furniture object, including product details
      * from HouseholdItem and additional furniture-specific attributes.

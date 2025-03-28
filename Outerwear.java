@@ -46,6 +46,28 @@ public class Outerwear extends ClothingItem {
         this.hooded = false;
     }
 
+    // =================== Setters ===================
+
+    /**
+     * Sets whether the outerwear is waterproof.
+     *
+     * @param isWaterProof true if the outerwear is waterproof, false otherwise.
+     */
+    public void setWaterProof(boolean isWaterProof) {
+        this.isWaterProof = isWaterProof;
+    }
+
+    /**
+     * Sets whether the outerwear has a hood.
+     *
+     * @param hooded true if the outerwear has a hood, false otherwise.
+     */
+    public void setHooded(boolean hooded) {
+        this.hooded = hooded;
+    }
+
+
+
     // =================== Getters ===================
 
     /**
@@ -66,25 +88,6 @@ public class Outerwear extends ClothingItem {
         return hooded;
     }
 
-    // =================== Setters ===================
-
-    /**
-     * Sets whether the outerwear is waterproof.
-     *
-     * @param isWaterProof true if the outerwear is waterproof, false otherwise.
-     */
-    public void setWaterProof(boolean isWaterProof) {
-        this.isWaterProof = isWaterProof;
-    }
-
-    /**
-     * Sets whether the outerwear has a hood.
-     *
-     * @param hooded true if the outerwear has a hood, false otherwise.
-     */
-    public void setHooded(boolean hooded) {
-        this.hooded = hooded;
-    }
 
     /**
      * Returns a string representation of the Outerwear object, including
