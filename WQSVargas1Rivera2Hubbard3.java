@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import javax.swing.*;
+import java.util.*;
 
 public class WQSVargas1Rivera2Hubbard3 {
 
@@ -15,6 +15,186 @@ public class WQSVargas1Rivera2Hubbard3 {
     static ArrayList<Phone> phones = new ArrayList<>();
     static ArrayList<TV> tvs = new ArrayList<>();
 
+    public void sellItem() {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<StoreItem> shoppingCart = new ArrayList<>();
+        ArrayList<String> purchasedCategories = new ArrayList<>();
+
+        while (true) {
+            System.out.println("\n===== WILMINGTON QUICK SHOP =====");
+            System.out.println("Select a category to shop:");
+            System.out.println("0. Finish Shopping and Checkout");
+            System.out.println("1. Food");
+            System.out.println("2. Electronics");
+            System.out.println("3. Clothing");
+            System.out.println("4. Household");
+            System.out.print("Enter your choice: ");
+
+            int categoryChoice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            if (categoryChoice == 0) break;
+
+            String category = "";
+            switch (categoryChoice) {
+                case 1:
+                    category = "Food";
+                    break;
+                case 2:
+                    category = "Electronics";
+                    break;
+                case 3:
+                    category = "Clothing";
+                    break;
+                case 4:
+                    category = "Household";
+                    break;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+                    continue;
+            }
+
+            ArrayList<? extends StoreItem> availableItems = getItemListByCategory(category);
+            if (availableItems.isEmpty()) {
+                System.out.println("No items available in this category.");
+                continue;
+            }
+
+            printTable(availableItems, category);
+
+            while (true) {
+                System.out.print("Enter item number to add to cart (0 to stop): ");
+                int choice = scanner.nextInt();
+                if (choice == 0) break;
+
+                if (choice < 1 || choice > availableItems.size()) {
+                    System.out.println("Invalid item number.");
+                    continue;
+                }
+
+                StoreItem selectedItem = availableItems.get(choice - 1);
+                System.out.print("Enter quantity (Available: " + selectedItem.getQuantity() + "): ");
+                int quantity = scanner.nextInt();
+
+                if (quantity < 1 || quantity > selectedItem.getQuantity()) {
+                    System.out.println("Invalid quantity.");
+                    continue;
+                }
+
+                StoreItem cartItem = createCartItem(selectedItem, quantity);
+                if (cartItem != null) {
+                    shoppingCart.add(cartItem);
+                    selectedItem.setQuantity(selectedItem.getQuantity() - quantity);
+                    if (!purchasedCategories.contains(category)) {
+                        purchasedCategories.add(category);
+                    }
+                    System.out.println("Added to cart: " + cartItem.getName());
+                }
+            }
+        }
+
+        if (shoppingCart.isEmpty()) {
+            System.out.println("No items purchased. Thanks for visiting!");
+            return;
+        }
+
+        printOrderSummary(shoppingCart);
+        System.out.print("Proceed to checkout? (yes/no): ");
+        String confirm = scanner.next().toLowerCase();
+
+        if (confirm.equals("yes")) {
+            calculateTotal(shoppingCart);
+            printInventory();
+            displayReturnPolicyForCategories(purchasedCategories);
+        } else {
+            System.out.println("Order canceled. Returning to main menu.");
+        }
+    }
+
+    private void printTable(ArrayList<? extends StoreItem> items, String category) {
+        System.out.println("\n--- " + category + " Items ---");
+        System.out.printf("%-4s %-20s %-10s %-15s %-40s\n", "#", "Name", "Price", "Brand", "Description");
+        for (int i = 0; i < items.size(); i++) {
+            StoreItem item = items.get(i);
+            String brand = item.getBrand() != null ? item.getBrand() : "N/A";
+            String desc = item.getDescription() != null ? item.getDescription() : "No description";
+            System.out.printf("%-4d %-20s $%-9.2f %-15s %-40s\n",
+                    (i + 1), item.getName(), item.getPrice(), brand, desc);
+        }
+    }
+
+    private void printOrderSummary(ArrayList<StoreItem> cart) {
+        System.out.println("\n===== ORDER SUMMARY =====");
+        Map<String, List<StoreItem>> grouped = new HashMap<>();
+
+        for (StoreItem item : cart) {
+            String category = item.getClass().getSimpleName();
+            if (!grouped.containsKey(category)) {
+                grouped.put(category, new ArrayList<StoreItem>());
+            }
+            grouped.get(category).add(item);
+        }
+
+        for (String category : grouped.keySet()) {
+            System.out.println("\n--- " + category + " ---");
+            for (StoreItem item : grouped.get(category)) {
+                System.out.println(item.getQuantity() + " x " + item.getName() + " @ $" + item.getPrice());
+            }
+        }
+    }
+
+    private void calculateTotal(ArrayList<StoreItem> cart) {
+        double foodTax = 0.02;
+        double nonFoodTax = 0.07;
+        double subtotal = 0;
+        double taxTotal = 0;
+
+        for (StoreItem item : cart) {
+            double itemTotal = item.getPrice() * item.getQuantity();
+            double taxRate = isFood(item) ? foodTax : nonFoodTax;
+            taxTotal += itemTotal * taxRate;
+            subtotal += itemTotal;
+        }
+
+        double total = subtotal + taxTotal;
+
+        System.out.printf("\nSubtotal: $%.2f\n", subtotal);
+        System.out.printf("Tax:      $%.2f\n", taxTotal);
+        System.out.printf("Total:    $%.2f\n", total);
+    }
+
+    private boolean isFood(StoreItem item) {
+        return item instanceof Fruit || item instanceof Vegetable || item instanceof ShelfStable;
+    }
+
+
+    private void displayReturnPolicyForCategories(List<String> categories) {
+        System.out.println("\n===== RETURN POLICIES =====");
+
+        for (String category : categories) {
+            switch (category) {
+                case "Food":
+                    System.out.println("Food: No returns due to perishables.");
+                    break;
+                case "Electronics":
+                    System.out.println("Electronics: 30-day return with receipt & original packaging.");
+                    break;
+                case "Clothing":
+                    System.out.println("Clothing: 45-day return with tags, unworn.");
+                    break;
+                case "Household":
+                    System.out.println("Household: 60-day return with original packaging.");
+                    break;
+                default:
+                    System.out.println(category + ": No return policy available.");
+            }
+        }
+    }
+
+
+
+
+
 
 
     public void addItem() {
@@ -26,7 +206,7 @@ public class WQSVargas1Rivera2Hubbard3 {
             System.out.println("2. Electronics");
             System.out.println("3. Clothing");
             System.out.println("4. Household");
-            System.out.print("Enter your choice: ");
+            System.out.print("\nEnter your choice: ");
             int category = scanner.nextInt();
             scanner.nextLine(); // consume newline
 
@@ -510,12 +690,14 @@ public class WQSVargas1Rivera2Hubbard3 {
 
     }
 
+
+
     public static void displayMenu() {
         System.out.println("The Wilmington Quick Shop. Select category:");
-        System.out.println("1. Add an item to the vehicle");
-        System.out.println("2. Sell an item to a vehicle");
+        System.out.println("1. Add an item to the shop");
+        System.out.println("2. Sell an item to a shop");
         System.out.println("3. Exit Shop ");
-        System.out.println("Enter your selection: ");
+        System.out.print("Enter your selection: ");
     }
 
     public void printInventory() {
@@ -563,6 +745,8 @@ public class WQSVargas1Rivera2Hubbard3 {
                     manager.printInventory();
                     break;
                 case 2://Sell
+                    manager.sellItem();
+                    manager.printInventory();
                     break;
                 case 3://Exit
                     break;

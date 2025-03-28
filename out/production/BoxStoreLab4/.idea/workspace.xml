@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd40c3ff-d7d0-4d16-9756-9730b3311bd3" name="Changes" comment="Fruit and ShelfStable Done" />
+    <list default="true" id="cd40c3ff-d7d0-4d16-9756-9730b3311bd3" name="Changes" comment="Fruit and ShelfStable Done">
+      <change beforePath="$PROJECT_DIR$/WQSVargas1Rivera2Hubbard3.java" beforeDir="false" afterPath="$PROJECT_DIR$/WQSVargas1Rivera2Hubbard3.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,16 +50,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.WQSVargas1Rivera2Hubbard3.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "hub",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/harrisonhubbard/CSC-331/BoxStoreLab4"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.WQSVargas1Rivera2Hubbard3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/harrisonhubbard/CSC-331/BoxStoreLab4&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
