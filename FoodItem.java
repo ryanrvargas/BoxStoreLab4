@@ -4,7 +4,10 @@
  * Date: 3/12/2025
  * Section: CSC-331-002
  *
- * Purpose: Implementing the Food item class
+ * Purpose: Represents a fruit item in the store's inventory.
+ * Extends the FoodItem class and includes fruit-specific attributes such as color,
+ * ripeness, and harvest date. Demonstrates inheritance and polymorphism within
+ * the food category of the shop system.
  */
 import java.util.*;
 

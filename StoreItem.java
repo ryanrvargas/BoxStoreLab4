@@ -1,5 +1,6 @@
 /**
- * Ryan Vargas
+ * StoreItem.java
+ * @author Ryan Vargas
  * Date: March 12, 2025
  * Section: 331 002
  *

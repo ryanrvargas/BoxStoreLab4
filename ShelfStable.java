@@ -4,7 +4,10 @@
  * Date: 3/13/2025
  * Section: CSC-331-002
  *
- * Purpose: Implementing the ShelfStable  class
+ * Purpose: Represents a shelf-stable food item in the store's inventory.
+ * Extends the FoodItem class and includes attributes specific to non-perishable products such as packaging type, manufacturing date,
+ * allergy information, and type.
+ * Supports polymorphism and is part of the inheritance structure in the shop system.
  */
 
 

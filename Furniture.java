@@ -1,5 +1,6 @@
 /**
- * Ryan Vargas
+ * Furniture.java
+ * @author Ryan Vargas
  * Date: March 14, 2025
  * Section: 331 002
  * The Furniture class represents furniture items available in the store.

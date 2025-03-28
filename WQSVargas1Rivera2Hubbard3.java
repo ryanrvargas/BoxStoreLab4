@@ -1,3 +1,14 @@
+/**
+ * WQSVargas1Rivera2Hubbard3.java
+ * This program demonstrates a simple shop where you can buy and sell items
+ *
+ * @author Ryan Vargas, Jovani Rivera, Harrison Hubbard
+ * Date: 03-28-2025
+ * Section: CSC-331-002
+ *
+ * Purpose: To demonstrate polymorphisim and inheritance through the different subclasses
+ */
+
 import javax.swing.*;
 import java.util.*;
 

@@ -1,5 +1,6 @@
 /**
- * Jovani Rivera-Hernandez
+ * Shoe.java
+ * @author Jovani Rivera-Hernandez
  * Date: March 12, 2025
  * Section: 331 002
  *

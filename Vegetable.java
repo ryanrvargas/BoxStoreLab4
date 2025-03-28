@@ -4,7 +4,9 @@
  * Date: 3/17/2025
  * Section: CSC-331-002
  *
- * Purpose: Implementing the Vegetable class
+ *  Purpose: Represents a vegetable item in the store's inventory.
+ *  Extends the FoodItem class and includes attributes specific to vegetables,such as color, harvest date, storage type, and freshness level.
+ *  Used to demonstrate inheritance and polymorphism in the shop system.
  */
 import java.util.*;
 

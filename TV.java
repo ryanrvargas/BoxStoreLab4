@@ -1,5 +1,6 @@
 /**
- * Jovani Rivera-Hernandez
+ * TV.java
+ * @author Jovani Rivera-Hernandez
  * Date: March 16, 2025
  * Section: 331 002
  *
